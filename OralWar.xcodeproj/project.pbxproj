@@ -14,6 +14,8 @@
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
 		D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35622511B8E0981005BA000 /* LaunchScreen.xib */; };
 		D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356225E1B8E0981005BA000 /* OralWarTests.swift */; };
+		D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
+		D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		D35622581B8E0981005BA000 /* OralWarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OralWarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D356225D1B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D356225E1B8E0981005BA000 /* OralWarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OralWarTests.swift; sourceTree = "<group>"; };
+		D3EF66371B8F635100BB36A5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +82,9 @@
 		D35622411B8E0981005BA000 /* OralWar */ = {
 			isa = PBXGroup;
 			children = (
+				D3EF663A1B8F63F700BB36A5 /* Game */,
 				D35622441B8E0981005BA000 /* AppDelegate.swift */,
-				D35622481B8E0981005BA000 /* GameScene.swift */,
-				D356224A1B8E0981005BA000 /* GameViewController.swift */,
+				D3EF66371B8F635100BB36A5 /* MenuViewController.swift */,
 				D356224C1B8E0981005BA000 /* Main.storyboard */,
 				D356224F1B8E0981005BA000 /* Images.xcassets */,
 				D35622511B8E0981005BA000 /* LaunchScreen.xib */,
@@ -113,6 +116,15 @@
 				D356225D1B8E0981005BA000 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3EF663A1B8F63F700BB36A5 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				D356224A1B8E0981005BA000 /* GameViewController.swift */,
+				D35622481B8E0981005BA000 /* GameScene.swift */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +230,7 @@
 				D35622491B8E0981005BA000 /* GameScene.swift in Sources */,
 				D356224B1B8E0981005BA000 /* GameViewController.swift in Sources */,
 				D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */,
+				D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */,
+				D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
