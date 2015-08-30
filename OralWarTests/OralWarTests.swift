@@ -21,6 +21,10 @@ class OralWarTests: XCTestCase {
         super.tearDown()
     }
     
+    func testPieceStatus() {
+        let status: UInt32 = 0x01000000
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")

@@ -14,6 +14,7 @@
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
 		D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35622511B8E0981005BA000 /* LaunchScreen.xib */; };
 		D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356225E1B8E0981005BA000 /* OralWarTests.swift */; };
+		D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D39F061B93665B0088A55F /* PieceStatus.swift */; };
 		D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 		D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		D35622581B8E0981005BA000 /* OralWarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OralWarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D356225D1B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D356225E1B8E0981005BA000 /* OralWarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OralWarTests.swift; sourceTree = "<group>"; };
+		D3D39F061B93665B0088A55F /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
 		D3EF66371B8F635100BB36A5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 		D35622411B8E0981005BA000 /* OralWar */ = {
 			isa = PBXGroup;
 			children = (
+				D3D39F051B93662F0088A55F /* System */,
 				D3EF663A1B8F63F700BB36A5 /* Game */,
 				D35622441B8E0981005BA000 /* AppDelegate.swift */,
 				D3EF66371B8F635100BB36A5 /* MenuViewController.swift */,
@@ -116,6 +119,14 @@
 				D356225D1B8E0981005BA000 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3D39F051B93662F0088A55F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				D3D39F061B93665B0088A55F /* PieceStatus.swift */,
+			);
+			name = System;
 			sourceTree = "<group>";
 		};
 		D3EF663A1B8F63F700BB36A5 /* Game */ = {
@@ -228,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35622491B8E0981005BA000 /* GameScene.swift in Sources */,
+				D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */,
 				D356224B1B8E0981005BA000 /* GameViewController.swift in Sources */,
 				D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */,
 				D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */,
@@ -360,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = OralWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = OralWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
