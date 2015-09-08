@@ -14,6 +14,8 @@
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
 		D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35622511B8E0981005BA000 /* LaunchScreen.xib */; };
 		D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356225E1B8E0981005BA000 /* OralWarTests.swift */; };
+		D3C9FC271B9F263300C5997E /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9FC261B9F263300C5997E /* OralPieceMap.swift */; };
+		D3C9FC291B9F2B4900C5997E /* menu.html in Resources */ = {isa = PBXBuildFile; fileRef = D3C9FC281B9F2B4900C5997E /* menu.html */; };
 		D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D39F061B93665B0088A55F /* PieceStatus.swift */; };
 		D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 		D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
@@ -41,6 +43,8 @@
 		D35622581B8E0981005BA000 /* OralWarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OralWarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D356225D1B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D356225E1B8E0981005BA000 /* OralWarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OralWarTests.swift; sourceTree = "<group>"; };
+		D3C9FC261B9F263300C5997E /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OralPieceMap.swift; sourceTree = "<group>"; };
+		D3C9FC281B9F2B4900C5997E /* menu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = menu.html; sourceTree = "<group>"; };
 		D3D39F061B93665B0088A55F /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
 		D3EF66371B8F635100BB36A5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,7 @@
 				D356224F1B8E0981005BA000 /* Images.xcassets */,
 				D35622511B8E0981005BA000 /* LaunchScreen.xib */,
 				D35622421B8E0981005BA000 /* Supporting Files */,
+				D3C9FC281B9F2B4900C5997E /* menu.html */,
 			);
 			path = OralWar;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D3D39F061B93665B0088A55F /* PieceStatus.swift */,
+				D3C9FC261B9F263300C5997E /* OralPieceMap.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */,
+				D3C9FC291B9F2B4900C5997E /* menu.html in Resources */,
 				D35622501B8E0981005BA000 /* Images.xcassets in Resources */,
 				D356224E1B8E0981005BA000 /* Main.storyboard in Resources */,
 			);
@@ -241,6 +248,7 @@
 				D35622491B8E0981005BA000 /* GameScene.swift in Sources */,
 				D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */,
 				D356224B1B8E0981005BA000 /* GameViewController.swift in Sources */,
+				D3C9FC271B9F263300C5997E /* OralPieceMap.swift in Sources */,
 				D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */,
 				D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */,
 			);

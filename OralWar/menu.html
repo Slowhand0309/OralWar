@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                <hr>
+                <h1>Hello {{yourName}}!</h1>
+                </div>
+        <div>
+            <form ng-controller="myController">
+                <lable>Link:</label>
+                    <button ng-click="onClick()">send</button>
+                    </form>
+        </div>
+    </body>
+    <script>
+        angular.module('myApp', [])
+        .controller('myController', ['$scope', function($scope) {
+                                     // setting click listener
+                                     $scope.onClick = function() {
+                                     location.href = "http://www.google.com";
+                                     };
+                                     }]);
+        </script>
+</html>

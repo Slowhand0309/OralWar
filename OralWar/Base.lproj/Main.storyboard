@@ -37,6 +37,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcB-Kh-sLx">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AZF-yT-yLH" id="Kdu-9x-rHl"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,6 +50,9 @@
                             <constraint firstItem="LcB-Kh-sLx" firstAttribute="top" secondItem="K7f-LV-xEr" secondAttribute="topMargin" id="vX5-1Q-vQL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="LcB-Kh-sLx" id="ih9-ib-IiR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdq-NX-2Mi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
