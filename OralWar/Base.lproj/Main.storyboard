@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcB-Kh-sLx">
-                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="AZF-yT-yLH" id="Kdu-9x-rHl"/>
@@ -46,6 +46,8 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LcB-Kh-sLx" secondAttribute="trailing" id="0iI-oV-3FW"/>
                             <constraint firstItem="LcB-Kh-sLx" firstAttribute="leading" secondItem="K7f-LV-xEr" secondAttribute="leadingMargin" id="2Tp-oZ-vhE"/>
+                            <constraint firstAttribute="trailing" secondItem="LcB-Kh-sLx" secondAttribute="trailing" id="HKy-pR-TO8"/>
+                            <constraint firstItem="LcB-Kh-sLx" firstAttribute="leading" secondItem="K7f-LV-xEr" secondAttribute="leading" id="jFs-Z3-mtL"/>
                             <constraint firstItem="xPc-tz-ke2" firstAttribute="top" secondItem="LcB-Kh-sLx" secondAttribute="bottom" id="pMf-cz-V5y"/>
                             <constraint firstItem="LcB-Kh-sLx" firstAttribute="top" secondItem="K7f-LV-xEr" secondAttribute="topMargin" id="vX5-1Q-vQL"/>
                         </constraints>

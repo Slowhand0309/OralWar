@@ -14,6 +14,8 @@
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
 		D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35622511B8E0981005BA000 /* LaunchScreen.xib */; };
 		D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356225E1B8E0981005BA000 /* OralWarTests.swift */; };
+		D3C0B57D1BA07CBB001C462D /* menu.css in Resources */ = {isa = PBXBuildFile; fileRef = D3C0B57C1BA07CBB001C462D /* menu.css */; };
+		D3C0B5801BA07EB5001C462D /* menu.js in Resources */ = {isa = PBXBuildFile; fileRef = D3C0B57F1BA07EB5001C462D /* menu.js */; };
 		D3C9FC271B9F263300C5997E /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9FC261B9F263300C5997E /* OralPieceMap.swift */; };
 		D3C9FC291B9F2B4900C5997E /* menu.html in Resources */ = {isa = PBXBuildFile; fileRef = D3C9FC281B9F2B4900C5997E /* menu.html */; };
 		D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D39F061B93665B0088A55F /* PieceStatus.swift */; };
@@ -43,6 +45,8 @@
 		D35622581B8E0981005BA000 /* OralWarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OralWarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D356225D1B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D356225E1B8E0981005BA000 /* OralWarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OralWarTests.swift; sourceTree = "<group>"; };
+		D3C0B57C1BA07CBB001C462D /* menu.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = menu.css; sourceTree = "<group>"; };
+		D3C0B57F1BA07EB5001C462D /* menu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = menu.js; sourceTree = "<group>"; };
 		D3C9FC261B9F263300C5997E /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OralPieceMap.swift; sourceTree = "<group>"; };
 		D3C9FC281B9F2B4900C5997E /* menu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = menu.html; sourceTree = "<group>"; };
 		D3D39F061B93665B0088A55F /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
@@ -96,7 +100,6 @@
 				D356224F1B8E0981005BA000 /* Images.xcassets */,
 				D35622511B8E0981005BA000 /* LaunchScreen.xib */,
 				D35622421B8E0981005BA000 /* Supporting Files */,
-				D3C9FC281B9F2B4900C5997E /* menu.html */,
 			);
 			path = OralWar;
 			sourceTree = "<group>";
@@ -104,6 +107,7 @@
 		D35622421B8E0981005BA000 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3C0B57B1BA07C40001C462D /* html */,
 				D35622431B8E0981005BA000 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -124,6 +128,24 @@
 				D356225D1B8E0981005BA000 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3C0B57B1BA07C40001C462D /* html */ = {
+			isa = PBXGroup;
+			children = (
+				D3C0B57E1BA07E8C001C462D /* menu */,
+			);
+			name = html;
+			sourceTree = "<group>";
+		};
+		D3C0B57E1BA07E8C001C462D /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9FC281B9F2B4900C5997E /* menu.html */,
+				D3C0B57C1BA07CBB001C462D /* menu.css */,
+				D3C0B57F1BA07EB5001C462D /* menu.js */,
+			);
+			name = menu;
 			sourceTree = "<group>";
 		};
 		D3D39F051B93662F0088A55F /* System */ = {
@@ -225,7 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */,
+				D3C0B57D1BA07CBB001C462D /* menu.css in Resources */,
 				D3C9FC291B9F2B4900C5997E /* menu.html in Resources */,
+				D3C0B5801BA07EB5001C462D /* menu.js in Resources */,
 				D35622501B8E0981005BA000 /* Images.xcassets in Resources */,
 				D356224E1B8E0981005BA000 /* Main.storyboard in Resources */,
 			);
