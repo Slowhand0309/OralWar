@@ -9,7 +9,7 @@
     </head>
     <body ng-controller="MenuListCtrl">
         <div>
-            <div ng-repeat="menu in menus">
+            <div ng-repeat="menu in menus" id="menu_list">
                 <button class="ui red basic button">{{menu.name}}</button>
                 <p>{{menu.describe}}</p>
             </div>
