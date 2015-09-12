@@ -19,6 +19,8 @@
 		D3C9FC271B9F263300C5997E /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9FC261B9F263300C5997E /* OralPieceMap.swift */; };
 		D3C9FC291B9F2B4900C5997E /* menu.html in Resources */ = {isa = PBXBuildFile; fileRef = D3C9FC281B9F2B4900C5997E /* menu.html */; };
 		D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D39F061B93665B0088A55F /* PieceStatus.swift */; };
+		D3E85CB41BA45F8C00C244A7 /* bacterialist.html in Resources */ = {isa = PBXBuildFile; fileRef = D3E85CB31BA45F8C00C244A7 /* bacterialist.html */; };
+		D3E85CB71BA467AC00C244A7 /* itemlist.html in Resources */ = {isa = PBXBuildFile; fileRef = D3E85CB61BA467AC00C244A7 /* itemlist.html */; };
 		D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 		D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		D3C9FC261B9F263300C5997E /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OralPieceMap.swift; sourceTree = "<group>"; };
 		D3C9FC281B9F2B4900C5997E /* menu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = menu.html; sourceTree = "<group>"; };
 		D3D39F061B93665B0088A55F /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
+		D3E85CB31BA45F8C00C244A7 /* bacterialist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = bacterialist.html; sourceTree = "<group>"; };
+		D3E85CB61BA467AC00C244A7 /* itemlist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = itemlist.html; sourceTree = "<group>"; };
 		D3EF66371B8F635100BB36A5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				D3C0B57E1BA07E8C001C462D /* menu */,
+				D3E85CB21BA45F4400C244A7 /* bacterialist */,
+				D3E85CB51BA4679900C244A7 /* itemlist */,
 			);
 			name = html;
 			sourceTree = "<group>";
@@ -155,6 +161,22 @@
 				D3C9FC261B9F263300C5997E /* OralPieceMap.swift */,
 			);
 			name = System;
+			sourceTree = "<group>";
+		};
+		D3E85CB21BA45F4400C244A7 /* bacterialist */ = {
+			isa = PBXGroup;
+			children = (
+				D3E85CB31BA45F8C00C244A7 /* bacterialist.html */,
+			);
+			name = bacterialist;
+			sourceTree = "<group>";
+		};
+		D3E85CB51BA4679900C244A7 /* itemlist */ = {
+			isa = PBXGroup;
+			children = (
+				D3E85CB61BA467AC00C244A7 /* itemlist.html */,
+			);
+			name = itemlist;
 			sourceTree = "<group>";
 		};
 		D3EF663A1B8F63F700BB36A5 /* Game */ = {
@@ -249,6 +271,8 @@
 				D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */,
 				D3C0B57D1BA07CBB001C462D /* menu.css in Resources */,
 				D3C9FC291B9F2B4900C5997E /* menu.html in Resources */,
+				D3E85CB71BA467AC00C244A7 /* itemlist.html in Resources */,
+				D3E85CB41BA45F8C00C244A7 /* bacterialist.html in Resources */,
 				D3C0B5801BA07EB5001C462D /* menu.js in Resources */,
 				D35622501B8E0981005BA000 /* Images.xcassets in Resources */,
 				D356224E1B8E0981005BA000 /* Main.storyboard in Resources */,
