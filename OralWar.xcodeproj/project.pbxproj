@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1956FB1BA5ACBE002F462D /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956F91BA5ACBE002F462D /* OralPieceMap.swift */; };
+		9E1956FC1BA5ACBE002F462D /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956F91BA5ACBE002F462D /* OralPieceMap.swift */; };
+		9E1956FD1BA5ACBE002F462D /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */; };
+		9E1956FE1BA5ACBE002F462D /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */; };
 		D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35622441B8E0981005BA000 /* AppDelegate.swift */; };
 		D35622491B8E0981005BA000 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35622481B8E0981005BA000 /* GameScene.swift */; };
 		D356224B1B8E0981005BA000 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356224A1B8E0981005BA000 /* GameViewController.swift */; };
@@ -20,8 +24,6 @@
 		D3B14E711BA4EDAE006E26A6 /* bacterialist.html in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E701BA4EDAE006E26A6 /* bacterialist.html */; };
 		D3B14E741BA4EDC0006E26A6 /* itemlist.html in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E731BA4EDC0006E26A6 /* itemlist.html */; };
 		D3B14E761BA4F08A006E26A6 /* menu_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E751BA4F08A006E26A6 /* menu_bg.png */; };
-		D3C9FC271B9F263300C5997E /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9FC261B9F263300C5997E /* OralPieceMap.swift */; };
-		D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D39F061B93665B0088A55F /* PieceStatus.swift */; };
 		D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 		D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E1956F91BA5ACBE002F462D /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OralPieceMap.swift; sourceTree = "<group>"; };
+		9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
 		D356223F1B8E0981005BA000 /* OralWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OralWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35622431B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35622441B8E0981005BA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +58,6 @@
 		D3B14E701BA4EDAE006E26A6 /* bacterialist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = bacterialist.html; path = www/bacterialist/bacterialist.html; sourceTree = "<group>"; };
 		D3B14E731BA4EDC0006E26A6 /* itemlist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = itemlist.html; path = www/itemlist/itemlist.html; sourceTree = "<group>"; };
 		D3B14E751BA4F08A006E26A6 /* menu_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_bg.png; path = www/menu/menu_bg.png; sourceTree = "<group>"; };
-		D3C9FC261B9F263300C5997E /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OralPieceMap.swift; sourceTree = "<group>"; };
-		D3D39F061B93665B0088A55F /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
 		D3EF66371B8F635100BB36A5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,8 +186,8 @@
 		D3D39F051B93662F0088A55F /* System */ = {
 			isa = PBXGroup;
 			children = (
-				D3D39F061B93665B0088A55F /* PieceStatus.swift */,
-				D3C9FC261B9F263300C5997E /* OralPieceMap.swift */,
+				9E1956F91BA5ACBE002F462D /* OralPieceMap.swift */,
+				9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -306,10 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35622491B8E0981005BA000 /* GameScene.swift in Sources */,
-				D3D39F071B93665B0088A55F /* PieceStatus.swift in Sources */,
 				D356224B1B8E0981005BA000 /* GameViewController.swift in Sources */,
-				D3C9FC271B9F263300C5997E /* OralPieceMap.swift in Sources */,
+				9E1956FB1BA5ACBE002F462D /* OralPieceMap.swift in Sources */,
 				D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */,
+				9E1956FD1BA5ACBE002F462D /* PieceStatus.swift in Sources */,
 				D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1956FC1BA5ACBE002F462D /* OralPieceMap.swift in Sources */,
 				D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */,
+				9E1956FE1BA5ACBE002F462D /* PieceStatus.swift in Sources */,
 				D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

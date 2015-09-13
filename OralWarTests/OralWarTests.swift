@@ -21,8 +21,22 @@ class OralWarTests: XCTestCase {
         super.tearDown()
     }
     
+    // PieceStatus class test
     func testPieceStatus() {
-        let status: UInt32 = 0x01000000
+        
+        // test1 hasBacteria
+        var status: UInt32 = 0x01050aff
+        var p1: PieceStatus = PieceStatus(_status: status)
+        XCTAssertTrue(p1.hasBacteria())
+        
+        // test2 getHardness
+        XCTAssertEqual(5, p1.getHardness())
+        
+        // test3 getItem
+        XCTAssertEqual(10, p1.getItem())
+        
+        // test4 getFellow
+        XCTAssertEqual(255, p1.getFellow())
     }
     
     func testExample() {
