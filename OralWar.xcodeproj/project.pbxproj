@@ -11,6 +11,10 @@
 		9E1956FC1BA5ACBE002F462D /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956F91BA5ACBE002F462D /* OralPieceMap.swift */; };
 		9E1956FD1BA5ACBE002F462D /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */; };
 		9E1956FE1BA5ACBE002F462D /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */; };
+		9EA7208C1BA711DE00025EC0 /* itemlist.css in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208A1BA711DE00025EC0 /* itemlist.css */; };
+		9EA7208D1BA711DE00025EC0 /* itemlist.js in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208B1BA711DE00025EC0 /* itemlist.js */; };
+		9EA720901BA711F100025EC0 /* bacterialist.css in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208E1BA711F100025EC0 /* bacterialist.css */; };
+		9EA720911BA711F100025EC0 /* bacterialist.js in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208F1BA711F100025EC0 /* bacterialist.js */; };
 		D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35622441B8E0981005BA000 /* AppDelegate.swift */; };
 		D35622491B8E0981005BA000 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35622481B8E0981005BA000 /* GameScene.swift */; };
 		D356224B1B8E0981005BA000 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356224A1B8E0981005BA000 /* GameViewController.swift */; };
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		9E1956F91BA5ACBE002F462D /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OralPieceMap.swift; sourceTree = "<group>"; };
 		9E1956FA1BA5ACBE002F462D /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatus.swift; sourceTree = "<group>"; };
+		9EA7208A1BA711DE00025EC0 /* itemlist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = itemlist.css; path = www/itemlist/itemlist.css; sourceTree = "<group>"; };
+		9EA7208B1BA711DE00025EC0 /* itemlist.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = itemlist.js; path = www/itemlist/itemlist.js; sourceTree = "<group>"; };
+		9EA7208E1BA711F100025EC0 /* bacterialist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bacterialist.css; path = www/bacterialist/bacterialist.css; sourceTree = "<group>"; };
+		9EA7208F1BA711F100025EC0 /* bacterialist.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = bacterialist.js; path = www/bacterialist/bacterialist.js; sourceTree = "<group>"; };
 		D356223F1B8E0981005BA000 /* OralWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OralWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35622431B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35622441B8E0981005BA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +178,8 @@
 		D3B14E6F1BA4ED9A006E26A6 /* bacterialist */ = {
 			isa = PBXGroup;
 			children = (
+				9EA7208E1BA711F100025EC0 /* bacterialist.css */,
+				9EA7208F1BA711F100025EC0 /* bacterialist.js */,
 				D3B14E701BA4EDAE006E26A6 /* bacterialist.html */,
 			);
 			name = bacterialist;
@@ -178,6 +188,8 @@
 		D3B14E721BA4EDB2006E26A6 /* itemlist */ = {
 			isa = PBXGroup;
 			children = (
+				9EA7208A1BA711DE00025EC0 /* itemlist.css */,
+				9EA7208B1BA711DE00025EC0 /* itemlist.js */,
 				D3B14E731BA4EDC0006E26A6 /* itemlist.html */,
 			);
 			name = itemlist;
@@ -287,9 +299,13 @@
 				D3B14E6C1BA4ED92006E26A6 /* menu.css in Resources */,
 				D3B14E711BA4EDAE006E26A6 /* bacterialist.html in Resources */,
 				D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */,
+				9EA720901BA711F100025EC0 /* bacterialist.css in Resources */,
 				D3B14E6D1BA4ED92006E26A6 /* menu.html in Resources */,
+				9EA7208D1BA711DE00025EC0 /* itemlist.js in Resources */,
 				D35622501B8E0981005BA000 /* Images.xcassets in Resources */,
+				9EA7208C1BA711DE00025EC0 /* itemlist.css in Resources */,
 				D356224E1B8E0981005BA000 /* Main.storyboard in Resources */,
+				9EA720911BA711F100025EC0 /* bacterialist.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

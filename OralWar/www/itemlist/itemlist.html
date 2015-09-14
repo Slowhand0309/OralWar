@@ -1,1 +1,23 @@
-<p>Item List</p>
+<!doctype html>
+<html ng-app="ItemApp" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+            <script src="itemlist.js"></script>
+            <link rel="stylesheet" href="itemlist.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.3/components/button.min.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.3/components/icon.min.css">
+    </head>
+    <body ng-controller="ItemListCtrl">
+        <div>
+            <div id="itemlist_header">
+                <i class="huge home icon" ng-click="onBack()"></i>
+            </div>
+            <hr>
+            <div id="itemlist_navigate">
+                <button class="ui right floated button">次へ</button>
+                <button class="ui left floated button">戻る</button>
+            </div>
+        </div>
+    </body>
+</html>
