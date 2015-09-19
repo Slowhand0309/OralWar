@@ -21,25 +21,25 @@ public class PieceStatus {
     
     // get being bacteria
     internal func hasBacteria() -> Bool {
-      var tmp = (status & 0xff000000) >> 24
+      let tmp = (status & 0xff000000) >> 24
       return tmp == 1
     }
     
     // get tooth hardness
     internal func getHardness() -> UInt32 {
-      var tmp = (status & 0x00ff0000) >> 16
+      let tmp = (status & 0x00ff0000) >> 16
       return tmp
     }
     
     // get item
     internal func getItem() -> UInt32 {
-      var tmp = (status & 0x0000ff00) >> 8
+      let tmp = (status & 0x0000ff00) >> 8
       return tmp
     }
     
     // get fellow bacteria
     internal func getFellow() -> UInt32 {
-      var tmp = (status & 0x000000ff)
+      let tmp = (status & 0x000000ff)
       return tmp
     }
 }

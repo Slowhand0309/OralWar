@@ -25,8 +25,8 @@ class OralWarTests: XCTestCase {
     func testPieceStatus() {
         
         // test1 hasBacteria
-        var status: UInt32 = 0x01050aff
-        var p1: PieceStatus = PieceStatus(_status: status)
+        let status: UInt32 = 0x01050aff
+        let p1: PieceStatus = PieceStatus(_status: status)
         XCTAssertTrue(p1.hasBacteria())
         
         // test2 getHardness

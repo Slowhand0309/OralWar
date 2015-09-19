@@ -34,7 +34,7 @@ class MenuViewController: UIViewController, UIWebViewDelegate {
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
         let url = request.URL!.absoluteString
-        if url!.hasPrefix(ORAL_SCHEME) {
+        if url.hasPrefix(ORAL_SCHEME) {
             
             if url == GAME_VIEW_URL {
                 startGame()
@@ -51,13 +51,13 @@ class MenuViewController: UIViewController, UIWebViewDelegate {
     // Screen transition GameViewController.
     private func startGame() {
         let gameViewController = self.storyboard!
-            .instantiateViewControllerWithIdentifier("gameview") as! UIViewController
+            .instantiateViewControllerWithIdentifier("gameview") 
         self.presentViewController(gameViewController, animated: false, completion: nil)
     }
     
     // location change
     private func locationChanged(res :String) {
-        var url = NSBundle.mainBundle().pathForResource(res, ofType: "html");
+        let url = NSBundle.mainBundle().pathForResource(res, ofType: "html");
         let reqURL = NSURL(string: url!)
         let req = NSURLRequest(URL: reqURL!)
         webView.loadRequest(req)
