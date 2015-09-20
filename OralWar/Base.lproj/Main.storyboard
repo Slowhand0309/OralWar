@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AZF-yT-yLH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AZF-yT-yLH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -44,12 +44,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="LcB-Kh-sLx" secondAttribute="trailing" id="0iI-oV-3FW"/>
-                            <constraint firstItem="LcB-Kh-sLx" firstAttribute="leading" secondItem="K7f-LV-xEr" secondAttribute="leadingMargin" id="2Tp-oZ-vhE"/>
-                            <constraint firstAttribute="trailing" secondItem="LcB-Kh-sLx" secondAttribute="trailing" id="HKy-pR-TO8"/>
-                            <constraint firstItem="LcB-Kh-sLx" firstAttribute="leading" secondItem="K7f-LV-xEr" secondAttribute="leading" id="jFs-Z3-mtL"/>
-                            <constraint firstItem="xPc-tz-ke2" firstAttribute="top" secondItem="LcB-Kh-sLx" secondAttribute="bottom" id="pMf-cz-V5y"/>
-                            <constraint firstItem="LcB-Kh-sLx" firstAttribute="top" secondItem="K7f-LV-xEr" secondAttribute="topMargin" id="vX5-1Q-vQL"/>
+                            <constraint firstAttribute="trailing" secondItem="LcB-Kh-sLx" secondAttribute="trailing" id="ABC-A8-KvU"/>
+                            <constraint firstItem="xPc-tz-ke2" firstAttribute="top" secondItem="LcB-Kh-sLx" secondAttribute="bottom" id="HGc-wu-agJ"/>
+                            <constraint firstItem="LcB-Kh-sLx" firstAttribute="top" secondItem="K7f-LV-xEr" secondAttribute="top" id="V2z-VN-0S5"/>
+                            <constraint firstItem="LcB-Kh-sLx" firstAttribute="leading" secondItem="K7f-LV-xEr" secondAttribute="leading" id="i5H-U1-bNZ"/>
                         </constraints>
                     </view>
                     <connections>
