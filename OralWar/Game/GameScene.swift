@@ -11,6 +11,9 @@ import SpriteKit
 class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
+        // sample
+        let uiView: UILayerView = UILayerView(frame: self.view!.frame)
+        self.view!.addSubview(uiView)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
