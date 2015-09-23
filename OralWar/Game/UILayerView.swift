@@ -23,13 +23,20 @@ class UILayerView: UIView {
     func setup(frame: CGRect) {
         // sample
         let button = UIButton()
-        button.frame = CGRectMake(0, 0, 200, 40)
+        button.frame = CGRectMake(0, 0, 100, 40)
         button.backgroundColor = UIColor.redColor()
         button.layer.masksToBounds = true
-        button.setTitle("button", forState: UIControlState.Normal)
+        button.setTitle("back", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Highlighted)
         button.layer.cornerRadius = 5.0
-        button.layer.position = CGPoint(x: frame.width / 2, y: 200)
+        button.layer.position = CGPoint(x: frame.width / 4, y: 50)
+        button.addTarget(self, action: "onClickBack:", forControlEvents: .TouchUpInside)
         
         self.addSubview(button)
+    }
+    
+    func onClickBack(sender: UIButton) {
+        print("onClickBack") // TODO screen back
     }
 }

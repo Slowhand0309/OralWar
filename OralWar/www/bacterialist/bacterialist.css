@@ -5,3 +5,10 @@ body {
     text-align: center;        /* 中央に表示  */
     background-color: #f9f9f9; /* 全体の背景色 */
 }
+
+#itemlist_header {
+    text-align: left;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #dfdeda;
+}
