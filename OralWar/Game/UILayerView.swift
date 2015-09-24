@@ -9,8 +9,16 @@
 import Foundation
 import UIKit
 
+protocol onClickDelegate {
+    
+    // call on click backbutton
+    func onClickBack(sender: UIButton)
+}
+
 class UILayerView: UIView {
 
+    var delegate: onClickDelegate!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup(frame)
@@ -20,6 +28,10 @@ class UILayerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func setDelegate(_delegate :onClickDelegate) {
+        delegate = _delegate
+    }
+    
     func setup(frame: CGRect) {
         // sample
         let button = UIButton()
@@ -38,5 +50,8 @@ class UILayerView: UIView {
     
     func onClickBack(sender: UIButton) {
         print("onClickBack") // TODO screen back
+        if let d = delegate {
+            d.onClickBack(sender)
+        }
     }
 }

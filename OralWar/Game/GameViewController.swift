@@ -9,12 +9,12 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, onClickDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = GameScene()
+        
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
@@ -23,9 +23,14 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
             
         /* Set the scale mode to scale to fit the window */
+        let scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
-            
         skView.presentScene(scene)
+
+        /* Set UI layer view */
+        let uiView = UILayerView(frame: self.view!.frame)
+        uiView.setDelegate(self)
+        scene.setUiLayerView(uiView)
     }
 
     override func shouldAutorotate() -> Bool {
@@ -39,5 +44,12 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    // back menu view
+    func onClickBack(sender: UIButton) {
+        let menuViewController = self.storyboard!
+            .instantiateViewControllerWithIdentifier("menuview")
+        self.presentViewController(menuViewController, animated: false, completion: nil)
     }
 }

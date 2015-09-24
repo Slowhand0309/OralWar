@@ -10,10 +10,22 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    override func didMoveToView(view: SKView) {
-        // sample
-        let uiView: UILayerView = UILayerView(frame: self.view!.frame)
+    var uiView: UILayerView!
+    
+    override init(size: CGSize) {
+        super.init(size: size)
+    }
+    
+    func setUiLayerView(view: UILayerView) {
+        uiView = view
         self.view!.addSubview(uiView)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func didMoveToView(view: SKView) {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
