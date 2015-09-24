@@ -32,6 +32,13 @@
 		D3B14E711BA4EDAE006E26A6 /* bacterialist.html in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E701BA4EDAE006E26A6 /* bacterialist.html */; };
 		D3B14E741BA4EDC0006E26A6 /* itemlist.html in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E731BA4EDC0006E26A6 /* itemlist.html */; };
 		D3B14E761BA4F08A006E26A6 /* menu_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E751BA4F08A006E26A6 /* menu_bg.png */; };
+		D3CDFDDD1BB44B3A00CC1D1E /* button.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDDB1BB44B3A00CC1D1E /* button.min.css */; settings = {ASSET_TAGS = (); }; };
+		D3CDFDDE1BB44B3A00CC1D1E /* icon.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDDC1BB44B3A00CC1D1E /* icon.min.css */; settings = {ASSET_TAGS = (); }; };
+		D3CDFDE41BB44C3600CC1D1E /* icons.eot in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDDF1BB44C3600CC1D1E /* icons.eot */; settings = {ASSET_TAGS = (); }; };
+		D3CDFDE51BB44C3600CC1D1E /* icons.svg in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDE01BB44C3600CC1D1E /* icons.svg */; settings = {ASSET_TAGS = (); }; };
+		D3CDFDE61BB44C3600CC1D1E /* icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDE11BB44C3600CC1D1E /* icons.ttf */; settings = {ASSET_TAGS = (); }; };
+		D3CDFDE71BB44C3600CC1D1E /* icons.woff in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDE21BB44C3600CC1D1E /* icons.woff */; settings = {ASSET_TAGS = (); }; };
+		D3CDFDE81BB44C3600CC1D1E /* icons.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D3CDFDE31BB44C3600CC1D1E /* icons.woff2 */; settings = {ASSET_TAGS = (); }; };
 		D3EF66381B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 		D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF66371B8F635100BB36A5 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +78,13 @@
 		D3B14E701BA4EDAE006E26A6 /* bacterialist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = bacterialist.html; path = www/bacterialist/bacterialist.html; sourceTree = "<group>"; };
 		D3B14E731BA4EDC0006E26A6 /* itemlist.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = itemlist.html; path = www/itemlist/itemlist.html; sourceTree = "<group>"; };
 		D3B14E751BA4F08A006E26A6 /* menu_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_bg.png; path = www/menu/menu_bg.png; sourceTree = "<group>"; };
+		D3CDFDDB1BB44B3A00CC1D1E /* button.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = button.min.css; path = www/common/button.min.css; sourceTree = "<group>"; };
+		D3CDFDDC1BB44B3A00CC1D1E /* icon.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = icon.min.css; path = www/common/icon.min.css; sourceTree = "<group>"; };
+		D3CDFDDF1BB44C3600CC1D1E /* icons.eot */ = {isa = PBXFileReference; lastKnownFileType = file; name = icons.eot; path = www/common/icons.eot; sourceTree = "<group>"; };
+		D3CDFDE01BB44C3600CC1D1E /* icons.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = icons.svg; path = www/common/icons.svg; sourceTree = "<group>"; };
+		D3CDFDE11BB44C3600CC1D1E /* icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icons.ttf; path = www/common/icons.ttf; sourceTree = "<group>"; };
+		D3CDFDE21BB44C3600CC1D1E /* icons.woff */ = {isa = PBXFileReference; lastKnownFileType = file; name = icons.woff; path = www/common/icons.woff; sourceTree = "<group>"; };
+		D3CDFDE31BB44C3600CC1D1E /* icons.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = icons.woff2; path = www/common/icons.woff2; sourceTree = "<group>"; };
 		D3EF66371B8F635100BB36A5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +176,7 @@
 		D3B14E671BA4ED79006E26A6 /* www */ = {
 			isa = PBXGroup;
 			children = (
+				D3CDFDDA1BB44B2300CC1D1E /* common */,
 				D3B14E721BA4EDB2006E26A6 /* itemlist */,
 				D3B14E6F1BA4ED9A006E26A6 /* bacterialist */,
 				D3B14E681BA4ED7F006E26A6 /* menu */,
@@ -198,6 +213,20 @@
 				D3B14E731BA4EDC0006E26A6 /* itemlist.html */,
 			);
 			name = itemlist;
+			sourceTree = "<group>";
+		};
+		D3CDFDDA1BB44B2300CC1D1E /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D3CDFDDF1BB44C3600CC1D1E /* icons.eot */,
+				D3CDFDE01BB44C3600CC1D1E /* icons.svg */,
+				D3CDFDE11BB44C3600CC1D1E /* icons.ttf */,
+				D3CDFDE21BB44C3600CC1D1E /* icons.woff */,
+				D3CDFDE31BB44C3600CC1D1E /* icons.woff2 */,
+				D3CDFDDB1BB44B3A00CC1D1E /* button.min.css */,
+				D3CDFDDC1BB44B3A00CC1D1E /* icon.min.css */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 		D3D39F051B93662F0088A55F /* System */ = {
@@ -302,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B14E761BA4F08A006E26A6 /* menu_bg.png in Resources */,
+				D3CDFDE81BB44C3600CC1D1E /* icons.woff2 in Resources */,
 				D3B14E741BA4EDC0006E26A6 /* itemlist.html in Resources */,
 				D3B14E6E1BA4ED92006E26A6 /* menu.js in Resources */,
 				D3B14E6C1BA4ED92006E26A6 /* menu.css in Resources */,
@@ -310,10 +340,16 @@
 				9EA720901BA711F100025EC0 /* bacterialist.css in Resources */,
 				D3B14E6D1BA4ED92006E26A6 /* menu.html in Resources */,
 				9EA7208D1BA711DE00025EC0 /* itemlist.js in Resources */,
+				D3CDFDE51BB44C3600CC1D1E /* icons.svg in Resources */,
 				D35622501B8E0981005BA000 /* Images.xcassets in Resources */,
 				9EA7208C1BA711DE00025EC0 /* itemlist.css in Resources */,
+				D3CDFDE41BB44C3600CC1D1E /* icons.eot in Resources */,
+				D3CDFDE71BB44C3600CC1D1E /* icons.woff in Resources */,
+				D3CDFDDD1BB44B3A00CC1D1E /* button.min.css in Resources */,
 				D356224E1B8E0981005BA000 /* Main.storyboard in Resources */,
 				9EA720911BA711F100025EC0 /* bacterialist.js in Resources */,
+				D3CDFDDE1BB44B3A00CC1D1E /* icon.min.css in Resources */,
+				D3CDFDE61BB44C3600CC1D1E /* icons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
