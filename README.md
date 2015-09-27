@@ -13,3 +13,11 @@ Let we are digging to take a fellow of bacteria and items.
 
 ### Usage
 ---
+
+### Author
+---
+MrSmall
+
+### License
+---
+[MIT License](http://opensource.org/licenses/MIT)
