@@ -21,22 +21,27 @@ class GameViewController: UIViewController, onClickDelegate {
             
         /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
-            
         /* Set the scale mode to scale to fit the window */
-        let scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
+        let scene = GameScene(size: view.frame.size)
+        scene.scaleMode = .Fill // for landscape
         skView.presentScene(scene)
 
         /* Set UI layer view */
         let uiView = UILayerView(frame: self.view!.frame)
         uiView.setDelegate(self)
         scene.setUiLayerView(uiView)
+        
     }
 
     override func shouldAutorotate() -> Bool {
-        return true
+        return false
     }
 
+    // Fix orientation of the screen to landscape at swift2
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.

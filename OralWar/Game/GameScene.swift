@@ -26,6 +26,14 @@ class GameScene: SKScene {
     }
     
     override func didMoveToView(view: SKView) {
+        
+        // show background for debug
+        let backtooth = SKSpriteNode(imageNamed: "backtooth01.png")
+        backtooth.size = self.size
+        backtooth.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2)
+        self.addChild(backtooth)
+        
+        print("w : \(self.size.width), y : \(self.size.height)")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
