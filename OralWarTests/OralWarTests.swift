@@ -39,6 +39,36 @@ class OralWarTests: XCTestCase {
         XCTAssertEqual(255, p1.getFellow())
     }
     
+    // OralPieceMap class test
+    func testOralPieceMap() {
+        
+        let map: OralPieceMap = OralPieceMap()
+        
+        let status: UInt32 = 0x000bff10
+        map[3, 3] = PieceStatus(_status: status)
+        
+        // test1 none
+        let t1 = map[0, 0]
+        XCTAssertFalse(t1.hasBacteria())
+        XCTAssertEqual(0, t1.getHardness())
+        XCTAssertEqual(0, t1.getItem())
+        XCTAssertEqual(0, t1.getFellow())
+        
+        // test2 in of range
+        let t2 = map[3, 3]
+        XCTAssertFalse(t2.hasBacteria())
+        XCTAssertEqual(11, t2.getHardness())
+        XCTAssertEqual(255, t2.getItem())
+        XCTAssertEqual(16, t2.getFellow())
+        
+        // test3 out of range
+        let t3 = map[-1, -1]
+        XCTAssertFalse(t3.hasBacteria())
+        XCTAssertEqual(0, t3.getHardness())
+        XCTAssertEqual(0, t3.getItem())
+        XCTAssertEqual(0, t3.getFellow())
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
