@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0B4A341BBC1E3B00914454 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B4A331BBC1E3B00914454 /* JsonUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30CF1BAF01C200A185FD /* UILayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30CE1BAF01C200A185FD /* UILayerView.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30D01BAF01C200A185FD /* UILayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30CE1BAF01C200A185FD /* UILayerView.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30D31BAF020A00A185FD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30D11BAF020A00A185FD /* GameScene.swift */; settings = {ASSET_TAGS = (); }; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0B4A331BBC1E3B00914454 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonUtil.swift; path = System/JsonUtil.swift; sourceTree = "<group>"; };
 		9E0C30CE1BAF01C200A185FD /* UILayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILayerView.swift; path = Game/UILayerView.swift; sourceTree = "<group>"; };
 		9E0C30D11BAF020A00A185FD /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Game/GameScene.swift; sourceTree = "<group>"; };
 		9E0C30D21BAF020A00A185FD /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				9E0C30D71BAF06F200A185FD /* OralPieceMap.swift */,
 				9E0C30D81BAF06F200A185FD /* PieceStatus.swift */,
+				9E0B4A331BBC1E3B00914454 /* JsonUtil.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0C30D51BAF020A00A185FD /* GameViewController.swift in Sources */,
+				9E0B4A341BBC1E3B00914454 /* JsonUtil.swift in Sources */,
 				9E0C30DB1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D31BAF020A00A185FD /* GameScene.swift in Sources */,
 				9E0C30CF1BAF01C200A185FD /* UILayerView.swift in Sources */,
