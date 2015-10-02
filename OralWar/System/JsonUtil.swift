@@ -38,6 +38,14 @@ class JsonUtil {
         return fileHandle.readDataToEndOfFile()
     }
     
+    // get json data from url
+    func getJsonDataFromUrl(url: String) -> NSData {
+        
+        let _url = NSURL(string: url)
+        print(_url)
+        return NSData()
+    }
+    
     // parse json data
     func parse(data: NSData) -> Bool {
         
