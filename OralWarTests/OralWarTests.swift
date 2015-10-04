@@ -69,6 +69,16 @@ class OralWarTests: XCTestCase {
         XCTAssertEqual(0, t3.getFellow())
     }
     
+    func testJsonUtil() {
+        
+        // test1 get json data and parse
+        let url: String = "hogehoge"; // change test url
+        let util: JsonUtil = JsonUtil()
+        let data = util.parseJson(url, type: JSON_FORMAT.URL)
+        
+        XCTAssertNotNil(data)
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")

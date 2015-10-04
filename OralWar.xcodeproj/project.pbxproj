@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E0B4A341BBC1E3B00914454 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0B4A331BBC1E3B00914454 /* JsonUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30CF1BAF01C200A185FD /* UILayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30CE1BAF01C200A185FD /* UILayerView.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30D01BAF01C200A185FD /* UILayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30CE1BAF01C200A185FD /* UILayerView.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30D31BAF020A00A185FD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30D11BAF020A00A185FD /* GameScene.swift */; settings = {ASSET_TAGS = (); }; };
@@ -18,6 +17,8 @@
 		9E0C30DA1BAF06F200A185FD /* OralPieceMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30D71BAF06F200A185FD /* OralPieceMap.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30DB1BAF06F200A185FD /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30D81BAF06F200A185FD /* PieceStatus.swift */; settings = {ASSET_TAGS = (); }; };
 		9E0C30DC1BAF06F200A185FD /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30D81BAF06F200A185FD /* PieceStatus.swift */; settings = {ASSET_TAGS = (); }; };
+		9E977FE71BC161B30025CE8C /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977FE61BC161B30025CE8C /* JsonUtil.swift */; settings = {ASSET_TAGS = (); }; };
+		9E977FE81BC161B30025CE8C /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E977FE61BC161B30025CE8C /* JsonUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		9EA7208C1BA711DE00025EC0 /* itemlist.css in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208A1BA711DE00025EC0 /* itemlist.css */; };
 		9EA7208D1BA711DE00025EC0 /* itemlist.js in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208B1BA711DE00025EC0 /* itemlist.js */; };
 		9EA720901BA711F100025EC0 /* bacterialist.css in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208E1BA711F100025EC0 /* bacterialist.css */; };
@@ -56,12 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E0B4A331BBC1E3B00914454 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonUtil.swift; path = System/JsonUtil.swift; sourceTree = "<group>"; };
 		9E0C30CE1BAF01C200A185FD /* UILayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILayerView.swift; path = Game/UILayerView.swift; sourceTree = "<group>"; };
 		9E0C30D11BAF020A00A185FD /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Game/GameScene.swift; sourceTree = "<group>"; };
 		9E0C30D21BAF020A00A185FD /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
 		9E0C30D71BAF06F200A185FD /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OralPieceMap.swift; path = System/OralPieceMap.swift; sourceTree = "<group>"; };
 		9E0C30D81BAF06F200A185FD /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PieceStatus.swift; path = System/PieceStatus.swift; sourceTree = "<group>"; };
+		9E977FE61BC161B30025CE8C /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonUtil.swift; path = System/JsonUtil.swift; sourceTree = "<group>"; };
 		9EA7208A1BA711DE00025EC0 /* itemlist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = itemlist.css; path = www/itemlist/itemlist.css; sourceTree = "<group>"; };
 		9EA7208B1BA711DE00025EC0 /* itemlist.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = itemlist.js; path = www/itemlist/itemlist.js; sourceTree = "<group>"; };
 		9EA7208E1BA711F100025EC0 /* bacterialist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bacterialist.css; path = www/bacterialist/bacterialist.css; sourceTree = "<group>"; };
@@ -237,9 +238,9 @@
 		D3D39F051B93662F0088A55F /* System */ = {
 			isa = PBXGroup;
 			children = (
+				9E977FE61BC161B30025CE8C /* JsonUtil.swift */,
 				9E0C30D71BAF06F200A185FD /* OralPieceMap.swift */,
 				9E0C30D81BAF06F200A185FD /* PieceStatus.swift */,
-				9E0B4A331BBC1E3B00914454 /* JsonUtil.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -375,7 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0C30D51BAF020A00A185FD /* GameViewController.swift in Sources */,
-				9E0B4A341BBC1E3B00914454 /* JsonUtil.swift in Sources */,
+				9E977FE71BC161B30025CE8C /* JsonUtil.swift in Sources */,
 				9E0C30DB1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D31BAF020A00A185FD /* GameScene.swift in Sources */,
 				9E0C30CF1BAF01C200A185FD /* UILayerView.swift in Sources */,
@@ -390,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0C30D61BAF020A00A185FD /* GameViewController.swift in Sources */,
+				9E977FE81BC161B30025CE8C /* JsonUtil.swift in Sources */,
 				9E0C30DC1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D41BAF020A00A185FD /* GameScene.swift in Sources */,
 				D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */,

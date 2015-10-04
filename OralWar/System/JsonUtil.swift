@@ -18,12 +18,36 @@ extension NSData {
     }
 }
 
+// declare json parse from format
+enum JSON_FORMAT {
+    case URL
+    case FILE
+}
+
+// class json utility
 class JsonUtil {
-    
-    var jsonData: NSDictionary!
     
     init () {
         
+    }
+    
+    // parse json function
+    func parseJson(uri: String, type: JSON_FORMAT) -> NSDictionary? {
+        
+        var data: NSData?
+        switch type {
+          case .URL:
+            data = getJsonDataFromUrl(uri)
+            break
+          case .FILE:
+            data = getJsonDataFromResource(uri)
+            break
+        }
+        
+        if let dataJson = data as NSData? {
+          return parse(dataJson)
+        }
+        return nil
     }
     
     // get json data from resource
@@ -41,20 +65,27 @@ class JsonUtil {
     // get json data from url
     func getJsonDataFromUrl(url: String) -> NSData {
         
-        let _url = NSURL(string: url)
-        print(_url)
+        if let nsurl = NSURL(string: url) as NSURL? {
+            var enc: NSStringEncoding = NSUTF8StringEncoding
+            do {
+                let str = try NSString(contentsOfURL: nsurl, usedEncoding:&enc)
+                return str.dataUsingEncoding(enc)!
+            } catch _ as NSError {
+                return NSData()
+            }
+        }
         return NSData()
     }
     
     // parse json data
-    func parse(data: NSData) -> Bool {
+    func parse(data: NSData) -> NSDictionary? {
         
+        var jsonData: NSDictionary?
         do {
             jsonData = try NSJSONSerialization.JSONObjectWithData(
-                data, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+                data, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary
         } catch  {
-            return false
         }
-        return true
+        return jsonData
     }
 }
