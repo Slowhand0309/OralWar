@@ -29,6 +29,8 @@
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
 		D35622531B8E0981005BA000 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35622511B8E0981005BA000 /* LaunchScreen.xib */; };
 		D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356225E1B8E0981005BA000 /* OralWarTests.swift */; };
+		D39684941BC2BF5D00744B22 /* Bacteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39684931BC2BF5D00744B22 /* Bacteria.swift */; settings = {ASSET_TAGS = (); }; };
+		D39684951BC2BF5D00744B22 /* Bacteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39684931BC2BF5D00744B22 /* Bacteria.swift */; settings = {ASSET_TAGS = (); }; };
 		D3B14E6C1BA4ED92006E26A6 /* menu.css in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E691BA4ED92006E26A6 /* menu.css */; };
 		D3B14E6D1BA4ED92006E26A6 /* menu.html in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E6A1BA4ED92006E26A6 /* menu.html */; };
 		D3B14E6E1BA4ED92006E26A6 /* menu.js in Resources */ = {isa = PBXBuildFile; fileRef = D3B14E6B1BA4ED92006E26A6 /* menu.js */; };
@@ -77,6 +79,7 @@
 		D35622581B8E0981005BA000 /* OralWarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OralWarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D356225D1B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D356225E1B8E0981005BA000 /* OralWarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OralWarTests.swift; sourceTree = "<group>"; };
+		D39684931BC2BF5D00744B22 /* Bacteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bacteria.swift; path = Data/Bacteria.swift; sourceTree = "<group>"; };
 		D3B14E691BA4ED92006E26A6 /* menu.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = menu.css; path = www/menu/menu.css; sourceTree = "<group>"; };
 		D3B14E6A1BA4ED92006E26A6 /* menu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = menu.html; path = www/menu/menu.html; sourceTree = "<group>"; };
 		D3B14E6B1BA4ED92006E26A6 /* menu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = menu.js; path = www/menu/menu.js; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		D35622411B8E0981005BA000 /* OralWar */ = {
 			isa = PBXGroup;
 			children = (
+				D39684961BC2BF7100744B22 /* Data */,
 				D3D39F051B93662F0088A55F /* System */,
 				D3EF663A1B8F63F700BB36A5 /* Game */,
 				D35622441B8E0981005BA000 /* AppDelegate.swift */,
@@ -169,6 +173,14 @@
 				D356225D1B8E0981005BA000 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D39684961BC2BF7100744B22 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D39684931BC2BF5D00744B22 /* Bacteria.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		D3B14E631BA4EB8B006E26A6 /* res */ = {
@@ -377,6 +389,7 @@
 			files = (
 				9E0C30D51BAF020A00A185FD /* GameViewController.swift in Sources */,
 				9E977FE71BC161B30025CE8C /* JsonUtil.swift in Sources */,
+				D39684941BC2BF5D00744B22 /* Bacteria.swift in Sources */,
 				9E0C30DB1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D31BAF020A00A185FD /* GameScene.swift in Sources */,
 				9E0C30CF1BAF01C200A185FD /* UILayerView.swift in Sources */,
@@ -392,6 +405,7 @@
 			files = (
 				9E0C30D61BAF020A00A185FD /* GameViewController.swift in Sources */,
 				9E977FE81BC161B30025CE8C /* JsonUtil.swift in Sources */,
+				D39684951BC2BF5D00744B22 /* Bacteria.swift in Sources */,
 				9E0C30DC1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D41BAF020A00A185FD /* GameScene.swift in Sources */,
 				D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */,
