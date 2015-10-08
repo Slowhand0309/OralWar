@@ -11,6 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     
     var uiView: UILayerView!
+    var oralPieceMap: OralPieceMap!
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -19,6 +20,11 @@ class GameScene: SKScene {
     func setUiLayerView(view: UILayerView) {
         uiView = view
         self.view!.addSubview(uiView)
+    }
+    
+    // set up piece map
+    func setUp() {
+        oralPieceMap = OralPieceMap()
     }
     
     required init?(coder aDecoder: NSCoder) {

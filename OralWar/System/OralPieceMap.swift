@@ -16,10 +16,24 @@ let HEIGHT: Int = 32
 class OralPieceMap {
     
     var pieces: [PieceStatus]
+    var no: Int
+    var name: String
     
     init() {
+        no = 0
+        name = ""
         pieces = Array(count: WIDTH * HEIGHT,
             repeatedValue: PieceStatus(_status: 0))
+    }
+    
+    // get stage no
+    func setNo(no: Int) {
+        self.no = no
+    }
+    
+    // get stage name
+    func setName(name: String) {
+        self.name = name
     }
     
     // value obtained in [w, h]

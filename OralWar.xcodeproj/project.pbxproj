@@ -30,6 +30,8 @@
 		9EA720901BA711F100025EC0 /* bacterialist.css in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208E1BA711F100025EC0 /* bacterialist.css */; };
 		9EA720911BA711F100025EC0 /* bacterialist.js in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208F1BA711F100025EC0 /* bacterialist.js */; };
 		9EAE65631BB7830800657CEA /* backtooth01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EAE65621BB7830800657CEA /* backtooth01.png */; settings = {ASSET_TAGS = (); }; };
+		D30F1BBD1BC6AF41009FC993 /* ConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */; settings = {ASSET_TAGS = (); }; };
+		D30F1BBE1BC6AF41009FC993 /* ConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35622441B8E0981005BA000 /* AppDelegate.swift */; };
 		D356224E1B8E0981005BA000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D356224C1B8E0981005BA000 /* Main.storyboard */; };
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
@@ -79,6 +81,7 @@
 		9EA7208E1BA711F100025EC0 /* bacterialist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bacterialist.css; path = www/bacterialist/bacterialist.css; sourceTree = "<group>"; };
 		9EA7208F1BA711F100025EC0 /* bacterialist.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = bacterialist.js; path = www/bacterialist/bacterialist.js; sourceTree = "<group>"; };
 		9EAE65621BB7830800657CEA /* backtooth01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backtooth01.png; path = res/backtooth01.png; sourceTree = "<group>"; };
+		D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvertUtil.swift; path = System/ConvertUtil.swift; sourceTree = "<group>"; };
 		D356223F1B8E0981005BA000 /* OralWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OralWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35622431B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35622441B8E0981005BA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +268,7 @@
 				9E0C30D71BAF06F200A185FD /* OralPieceMap.swift */,
 				9E0C30D81BAF06F200A185FD /* PieceStatus.swift */,
 				9E90FBAF1BC4193000F7A090 /* UserDefaultsUtil.swift */,
+				D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -403,6 +407,7 @@
 				9E0C30D51BAF020A00A185FD /* GameViewController.swift in Sources */,
 				9E977FE71BC161B30025CE8C /* JsonUtil.swift in Sources */,
 				D39684941BC2BF5D00744B22 /* Bacteria.swift in Sources */,
+				D30F1BBD1BC6AF41009FC993 /* ConvertUtil.swift in Sources */,
 				9E0C30DB1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D31BAF020A00A185FD /* GameScene.swift in Sources */,
 				9E0C30CF1BAF01C200A185FD /* UILayerView.swift in Sources */,
@@ -422,6 +427,7 @@
 				9E0C30D61BAF020A00A185FD /* GameViewController.swift in Sources */,
 				9E977FE81BC161B30025CE8C /* JsonUtil.swift in Sources */,
 				D39684951BC2BF5D00744B22 /* Bacteria.swift in Sources */,
+				D30F1BBE1BC6AF41009FC993 /* ConvertUtil.swift in Sources */,
 				9E0C30DC1BAF06F200A185FD /* PieceStatus.swift in Sources */,
 				9E0C30D41BAF020A00A185FD /* GameScene.swift in Sources */,
 				D356225F1B8E0981005BA000 /* OralWarTests.swift in Sources */,
