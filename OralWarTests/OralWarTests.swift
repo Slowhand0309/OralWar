@@ -72,11 +72,13 @@ class OralWarTests: XCTestCase {
     func testJsonUtil() {
         
         // test1 get json data and parse
-        let url: String = "hogehoge"; // change test url
+        let url: String = "stagelist"; // change test url
         let util: JsonUtil = JsonUtil()
-        let data = util.parseJson(url, type: JSON_FORMAT.URL)
+        let data = util.parseJson(url, type: JSON_FORMAT.FILE)
         
         XCTAssertNotNil(data)
+        let obj: NSArray = (data as? NSArray)!
+        print(obj)
     }
     
     func testExample() {

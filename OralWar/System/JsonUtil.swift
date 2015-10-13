@@ -32,7 +32,7 @@ class JsonUtil {
     }
     
     // parse json function
-    func parseJson(uri: String, type: JSON_FORMAT) -> NSDictionary? {
+    func parseJson(uri: String, type: JSON_FORMAT) -> AnyObject? {
         
         var data: NSData?
         switch type {
@@ -78,12 +78,12 @@ class JsonUtil {
     }
     
     // parse json data
-    func parse(data: NSData) -> NSDictionary? {
+    func parse(data: NSData) -> AnyObject? {
         
-        var jsonData: NSDictionary?
+        var jsonData: AnyObject?
         do {
-            jsonData = try NSJSONSerialization.JSONObjectWithData(
-                data, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary
+            jsonData = try (NSJSONSerialization.JSONObjectWithData(
+                data, options: NSJSONReadingOptions.AllowFragments) )
         } catch  {
         }
         return jsonData

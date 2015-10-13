@@ -14,11 +14,12 @@ let STAGE_NAME: String = "stage_name"
 
 class ConvertUtil {
     
+    // convert json -> OralPieceMap
     class func toOralPieceMap(jsonData: NSDictionary?) -> OralPieceMap? {
         
         var no: Int
         var name: String
-        let stageMap: OralPieceMap?
+        let stageMap: OralPieceMap = OralPieceMap()
         
         guard let data: NSDictionary = jsonData else {
             return nil
@@ -31,6 +32,6 @@ class ConvertUtil {
         if let stageName: String = data[STAGE_NAME] as? String {
             name = stageName
         }
-        return OralPieceMap()
+        return stageMap
     }
 }
