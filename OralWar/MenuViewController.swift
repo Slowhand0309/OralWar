@@ -64,7 +64,12 @@ class MenuViewController: UIViewController, UIWebViewDelegate {
     }
     
     override func shouldAutorotate() -> Bool {
-        return true
+        return false
+    }
+    
+    // Fix orientation of the screen to landscape at swift2
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Landscape
     }
     
     override func didReceiveMemoryWarning() {

@@ -85,6 +85,7 @@ class JsonUtil {
             jsonData = try (NSJSONSerialization.JSONObjectWithData(
                 data, options: NSJSONReadingOptions.AllowFragments) )
         } catch  {
+            // return nil
         }
         return jsonData
     }
