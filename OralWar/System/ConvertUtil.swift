@@ -8,9 +8,16 @@
 
 import Foundation
 
-// declare key
+// declare key for stage
 let STAGE_NO: String = "stage_no"
 let STAGE_NAME: String = "stage_name"
+
+// declare key for bacteria
+let ID: String = "id"
+let RATE: String = "rate"
+let CYCLE: String = "cycle"
+
+let URI: String = "uri"
 
 class ConvertUtil {
     
@@ -33,5 +40,64 @@ class ConvertUtil {
             name = stageName
         }
         return stageMap
+    }
+    
+    // convert json data -> Bacteria
+    class func toBacteria(jsonData: NSDictionary?) -> Bacteria? {
+        guard let data: NSDictionary = jsonData else {
+            return nil
+        }
+        // get id
+        guard let id: UInt16 = data[ID] as? UInt16 else {
+            return nil
+        }
+        // get rate
+        guard let rate: Float32 = data[RATE] as? Float32 else {
+            return nil
+        }
+        // get cycle
+        guard let cycle: UInt16 = data[CYCLE] as? UInt16 else {
+            return nil
+        }
+        // TODO animType, expandType
+        
+        let bacteria: Bacteria = Bacteria()
+        bacteria.setId(id)
+        bacteria.setRate(rate)
+        bacteria.setCycle(cycle)
+        
+        return bacteria
+    }
+    
+    // convert json data -> Item
+    class func toItem(jsonData: NSDictionary?) -> Item? {
+        guard let data: NSDictionary = jsonData else {
+            return nil
+        }
+        // get id
+        guard let id: UInt16 = data[ID] as? UInt16 else {
+            return nil
+        }
+        // get name
+        guard let name: String = data[ID] as? String else {
+            return nil
+        }
+        
+        let item: Item = Item()
+        item.setId(id)
+        item.setName(name)
+        return item
+    }
+    
+    // get stage uri
+    class func getStageUri(jsonData: NSDictionary?) -> String {
+        
+        guard let data: NSDictionary = jsonData else {
+            return ""
+        }
+        guard let uri: String = data[URI] as! String! else {
+            return ""
+        }
+        return uri
     }
 }
