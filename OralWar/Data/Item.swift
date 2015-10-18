@@ -19,10 +19,10 @@ import Foundation
 // declare item class
 class Item {
     
-    var id: UInt16 // identifier
+    var id: Int // identifier
     var name: String // item name
     var effectType: EffectType // item effect type
-    var effectValue: UInt32 // item effect value
+    var effectValue: Int // item effect value
 
     // construct
     init () {
@@ -33,12 +33,12 @@ class Item {
     }
     
     // get item id
-    func getId() -> UInt16 {
+    func getId() -> Int {
         return id
     }
     
     // set item id
-    func setId(id: UInt16) {
+    func setId(id: Int) {
         self.id = id
     }
     
@@ -63,12 +63,12 @@ class Item {
     }
     
     // get item effect value
-    func getEffectValue() -> UInt32 {
+    func getEffectValue() -> Int {
         return effectValue
     }
     
     // set item effect value
-    func setEffectValue(effectValue: UInt32) {
+    func setEffectValue(effectValue: Int) {
         self.effectValue = effectValue
     }
 }

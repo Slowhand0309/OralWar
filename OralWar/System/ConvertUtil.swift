@@ -48,15 +48,15 @@ class ConvertUtil {
             return nil
         }
         // get id
-        guard let id: UInt16 = data[ID] as? UInt16 else {
+        guard let id: Int = data[ID] as? Int else {
             return nil
         }
         // get rate
-        guard let rate: Float32 = data[RATE] as? Float32 else {
+        guard let rate: Float = data[RATE] as? Float else {
             return nil
         }
         // get cycle
-        guard let cycle: UInt16 = data[CYCLE] as? UInt16 else {
+        guard let cycle: Int = data[CYCLE] as? Int else {
             return nil
         }
         // TODO animType, expandType
@@ -75,7 +75,7 @@ class ConvertUtil {
             return nil
         }
         // get id
-        guard let id: UInt16 = data[ID] as? UInt16 else {
+        guard let id: Int = data[ID] as? Int else {
             return nil
         }
         // get name

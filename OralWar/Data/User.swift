@@ -11,12 +11,12 @@ import Foundation
 // declare user class
 class User {
     
-    var id: UInt32 // identifier
+    var id: Int // identifier
     var name: String // user name
-    var stage: UInt32 // user current stage
-    var score: UInt32 // user score
-    var itemlist: [UInt16] = [] // user has itemlist
-    var bacterialist: [UInt16] = [] // user has bacterialist
+    var stage: Int // user current stage
+    var score: Int // user score
+    var itemlist: [Int] = [] // user has itemlist
+    var bacterialist: [Int] = [] // user has bacterialist
     var updatedat: NSTimeInterval
     
     init () {
@@ -28,12 +28,12 @@ class User {
     }
     
     // get id
-    func getId() -> UInt32 {
+    func getId() -> Int {
         return id
     }
     
     // set id
-    func setId(id: UInt32) {
+    func setId(id: Int) {
         self.id = id
     }
     
@@ -48,42 +48,52 @@ class User {
     }
     
     // get current stage
-    func getStage() -> UInt32 {
+    func getStage() -> Int {
         return stage
     }
     
     // set current stage
-    func setStage(stage: UInt32) {
+    func setStage(stage: Int) {
         self.stage = stage
     }
     
     // get user score
-    func getScore() -> UInt32 {
+    func getScore() -> Int {
         return score
     }
     
     // set user score
-    func setScore(score: UInt32) {
+    func setScore(score: Int) {
         self.score = score
     }
     
     // get user item list
-    func getItemlist() -> Array<UInt16> {
+    func getItemlist() -> Array<Int> {
         return itemlist
     }
     
+    // set user item list
+    func setItemlist(list: Array<Int>) {
+        self.itemlist = list
+    }
+    
     // add user item list
-    func addItemList(id: UInt16) {
+    func addItemList(id: Int) {
         self.itemlist.append(id)
     }
     
     // get user bacteria list
-    func getBacterialist() -> Array<UInt16> {
+    func getBacterialist() -> Array<Int> {
         return bacterialist
     }
     
+    // set user bacteria list
+    func setBacterialist(list: Array<Int>) {
+        self.bacterialist = list
+    }
+    
     // add user bacteria list
-    func addBacterialist(id: UInt16) {
+    func addBacterialist(id: Int) {
         self.bacterialist.append(id)
     }
     

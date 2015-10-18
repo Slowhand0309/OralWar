@@ -24,9 +24,9 @@ enum ExpandType {
 
 class Bacteria {
     
-    var id: UInt16
-    var rate: Float32
-    var cycle: UInt16
+    var id: Int
+    var rate: Float
+    var cycle: Int
     var animType: AnimationType
     var expandType: ExpandType
     
@@ -39,32 +39,32 @@ class Bacteria {
     }
     
     // set id
-    func getId() -> UInt16 {
+    func getId() -> Int {
         return id
     }
     
     // get id
-    func setId(id: UInt16) {
+    func setId(id: Int) {
         self.id = id
     }
     
     // get rate
-    func getRate() -> Float32 {
+    func getRate() -> Float {
         return rate
     }
     
     // set rate
-    func setRate(rate: Float32) {
+    func setRate(rate: Float) {
         self.rate = rate
     }
     
     // get cycle
-    func getCycle() ->UInt16 {
+    func getCycle() ->Int {
         return cycle
     }
     
     // set cyclle
-    func setCycle(cycle: UInt16) {
+    func setCycle(cycle: Int) {
         self.cycle = cycle
     }
     
