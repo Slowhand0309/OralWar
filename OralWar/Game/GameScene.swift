@@ -40,10 +40,30 @@ class GameScene: SKScene {
         self.addChild(backtooth)
         
         print("w : \(self.size.width), y : \(self.size.height)")
+        
+        // TODO for debug
+        let ary = TextureUtil.loadDivImage("chip_pumpkin1.png", col: 3, row: 4)
+        let node: SKSpriteNode = SKSpriteNode(texture: ary[0])
+        node.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2)
+        node.name = "pumpkin"
+        //let action: SKAction = SKAction.animateWithTextures(ary, timePerFrame: 0.2)
+        //let forever: SKAction = SKAction.repeatActionForever(action)
+        //node.runAction(forever)
+        self.addChild(node)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
+        if let touch = touches.first as UITouch! {
+            let location = touch.locationInView(self.view)
+            let newlocation = CGPoint(x: location.x, y: self.size.height - location.y)
+            
+            // TODO for debug
+            print(location)
+            let node = self.childNodeWithName("pumpkin")
+            let action = SKAction.moveTo(newlocation, duration: 1.0)
+            node?.runAction(action)
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {

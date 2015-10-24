@@ -16,8 +16,11 @@ class TextureUtil {
         
         let srcTexture: SKTexture = SKTexture(imageNamed: imgName)
         
-        let w = srcTexture.size().width / CGFloat(col)
-        let h = srcTexture.size().height / CGFloat(row)
+        let width = srcTexture.size().width
+        let height = srcTexture.size().height
+        
+        let w = (width / CGFloat(col)) / width
+        let h = (height / CGFloat(row)) / height
         
         var array: Array<SKTexture> = Array<SKTexture>()
         
