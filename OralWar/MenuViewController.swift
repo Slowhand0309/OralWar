@@ -27,6 +27,9 @@ class MenuViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // initialize user defaults
+        UserDefaultsUtil.initUserDefaults()
+        
         locationChanged(MENU)
     }
     

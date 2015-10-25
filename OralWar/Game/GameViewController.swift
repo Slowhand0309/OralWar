@@ -11,9 +11,9 @@ import SpriteKit
 
 class GameViewController: UIViewController, onClickDelegate {
 
+    // view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let skView = self.view as! SKView
         skView.showsFPS = true
@@ -25,14 +25,27 @@ class GameViewController: UIViewController, onClickDelegate {
         let scene = GameScene(size: view.frame.size)
         scene.scaleMode = .Fill // for landscape
         skView.presentScene(scene)
+        
+        setup(scene)
+    }
 
+    // set up for ui, user info
+    func setup(scene: GameScene) -> Bool {
         /* Set UI layer view */
         let uiView = UILayerView(frame: self.view!.frame)
         uiView.setDelegate(self)
         scene.setUiLayerView(uiView)
         
+        /* Set User */
+        guard let user = UserDefaultsUtil.getUserInfo() else {
+            return false;
+        }
+        scene.setUser(user)
+        
+        scene.setUp()
+        return true
     }
-
+    
     override func shouldAutorotate() -> Bool {
         return false
     }

@@ -12,11 +12,18 @@ class GameScene: SKScene {
     
     var uiView: UILayerView!
     var oralPieceMap: OralPieceMap!
+    var user: User!
     
     override init(size: CGSize) {
         super.init(size: size)
     }
     
+    // set user info
+    func setUser(user: User) {
+        self.user = user
+    }
+    
+    // set ui layer
     func setUiLayerView(view: UILayerView) {
         uiView = view
         self.view!.addSubview(uiView)
@@ -24,7 +31,8 @@ class GameScene: SKScene {
     
     // set up piece map
     func setUp() {
-        oralPieceMap = OralPieceMap()
+        // TODO
+        // oralPieceMap = OralPieceMap()
     }
     
     required init?(coder aDecoder: NSCoder) {
