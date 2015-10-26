@@ -26,6 +26,9 @@ class UILayerView: UIView {
     // declare function for click back button
     let BUTTON_BACK_FUNCTION: Selector = "onClickBack:"
     
+    // declare debug font color
+    let DEBUG_FONT_COLOR = UIColor.whiteColor()
+    
     var delegate: onClickDelegate!
     
     override init(frame: CGRect) {
@@ -61,13 +64,29 @@ class UILayerView: UIView {
         guard let user = UserDefaultsUtil.getUserInfo() else {
             return
         }
-        // set user name
-        let nameLabel = UILabel()
-        nameLabel.text = "NAME : " + user.getName()
-        nameLabel.frame = CGRectMake(0, 0, 100, 40)
-        nameLabel.textColor = UIColor.whiteColor()
-        nameLabel.layer.position = CGPoint(x: frame.width - 100, y: UILAYER_TOP_Y)
-        self.addSubview(nameLabel)
+        printDebug(user)
+    }
+    
+    func printDebug(userInfo: User) {
+        let debug = UserDefaultsUtil.getDebugMode()
+        // show debug info
+        if debug {
+            var debugMsg: String = "ID : " + String(userInfo.getId()) + "¥n"
+            debugMsg += "NAME : " + userInfo.getName() + "¥n"
+            debugMsg += "ITEM : " + String(userInfo.getItemlist().count) + "¥n"
+            debugMsg += "BACTERIA : " + String(userInfo.getBacterialist().count) + "¥n"
+            
+            // set debug msg
+            let debugLabel = UILabel()
+            debugLabel.text = debugMsg
+            debugLabel.frame = CGRectMake(0, 0, 100, 40)
+            debugLabel.textColor = DEBUG_FONT_COLOR
+            debugLabel.layer.position = CGPoint(x: frame.width - 100, y: UILAYER_TOP_Y)
+            self.addSubview(debugLabel)
+            
+            // set 
+            userInfo.getId()
+        }
     }
     
     // call when click back button
