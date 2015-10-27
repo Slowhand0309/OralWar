@@ -10,7 +10,7 @@
     <body ng-controller="MenuListCtrl">
         <div id="menu">
             <div ng-repeat="menu in menus" id="menu_list">
-                <button class="ui red basic button" ng-click="onClick(menu.id)">{{menu.name}}</button>
+                <button class="ui red button" ng-click="onClick(menu.id)">{{menu.name}}</button>
                 <p>{{menu.describe}}</p>
             </div>
         </div>

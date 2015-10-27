@@ -5,14 +5,15 @@ body {
     text-align: center;                     /* 中央に表示    */
     background-image:url("menu_bg.png");    /* 背景画像      */
     background-size: cover;                 /* 画面全体に表示 */
-    background-position: center center;     /* 中央に表示    */
 }
 
 #menu {
-    vertical-align: middle;
+    bottom: 0px;
+    position: fixed;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #menu_list {
-    margin: 0 auto;
-    vertical-align: middle;
+    float: both;
 }
