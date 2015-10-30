@@ -1,6 +1,8 @@
 # OralWar
 iOS game application to increase the bacteria!?
 
+![capture](http://slowhand0309.github.io/images/oralwar.png)
+
 ### Description
 ---
 This game is a game that burrows the teeth yourself a fungus.<br />
