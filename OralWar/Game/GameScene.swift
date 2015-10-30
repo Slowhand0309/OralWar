@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+let STAGELIST: String = "stagelist"
+
 class GameScene: SKScene {
     
     var uiView: UILayerView!
@@ -30,9 +32,23 @@ class GameScene: SKScene {
     }
     
     // set up piece map
-    func setUp() {
+    func setUp() -> Bool {
+        // load UserDefaults
+        guard let user = UserDefaultsUtil.getUserInfo() else {
+            return false
+        }
+        let stage = user.getStage()
+        print("stage \(stage)")
+        
+        // read stagelist.json
+        let util: JsonUtil = JsonUtil()
+        let data = util.parseJson(STAGELIST, type: JSON_FORMAT.FILE)
+        guard let stageData: NSArray = data as? NSArray else {
+            return false
+        }
         // TODO
         // oralPieceMap = OralPieceMap()
+        return true
     }
     
     required init?(coder aDecoder: NSCoder) {

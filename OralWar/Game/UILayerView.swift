@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
+// delegate for click
 protocol onClickDelegate {
     
     // call on click backbutton
     func onClickBack(sender: UIButton)
 }
 
+// View for UILayer
 class UILayerView: UIView {
 
     // unify top y position
@@ -31,6 +33,7 @@ class UILayerView: UIView {
     
     var delegate: onClickDelegate!
     
+    // initialize
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup(frame)
@@ -40,12 +43,25 @@ class UILayerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // set delegate
     func setDelegate(_delegate :onClickDelegate) {
         delegate = _delegate
     }
     
+    // setup
     func setup(frame: CGRect) {
 
+        setBackButton()
+
+        // get user info
+        guard let user = UserDefaultsUtil.getUserInfo() else {
+            return
+        }
+        printDebug(user)
+    }
+    
+    // set back button
+    func setBackButton() {
         // set back button
         let button = UIButton()
         button.frame = BUTTON_RECT
@@ -59,14 +75,9 @@ class UILayerView: UIView {
         button.addTarget(self, action: BUTTON_BACK_FUNCTION, forControlEvents: .TouchUpInside)
         
         self.addSubview(button)
-
-        // get user info
-        guard let user = UserDefaultsUtil.getUserInfo() else {
-            return
-        }
-        printDebug(user)
     }
     
+    // print for debug
     func printDebug(userInfo: User) {
         let debug = UserDefaultsUtil.getDebugMode()
         // show debug info
