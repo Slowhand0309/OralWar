@@ -46,6 +46,28 @@ class GameScene: SKScene {
         guard let stageData: NSArray = data as? NSArray else {
             return false
         }
+        
+        var uri = ""
+        for elm in stageData {
+            print(elm)
+            guard let stageInfo: Stage = ConvertUtil.toStage(elm as? NSDictionary) else {
+                continue
+            }
+            if stage == stageInfo.getId() {
+                uri = stageInfo.getUri()
+            }
+        }
+        
+        if uri == "" {
+            // uri empty
+            return false
+        }
+        print(uri)
+        // get stage data
+        guard let stageMapData = util.parseJson(uri) else {
+            return false
+        }
+        
         // TODO
         // oralPieceMap = OralPieceMap()
         return true

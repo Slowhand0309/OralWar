@@ -17,6 +17,8 @@ let ID: String = "id"
 let RATE: String = "rate"
 let CYCLE: String = "cycle"
 
+// declare key for stagelist
+let NAME: String = "name"
 let URI: String = "uri"
 
 class ConvertUtil {
@@ -90,14 +92,29 @@ class ConvertUtil {
     }
     
     // get stage uri
-    class func getStageUri(jsonData: NSDictionary?) -> String {
+    class func toStage(jsonData: NSDictionary?) -> Stage? {
         
         guard let data: NSDictionary = jsonData else {
-            return ""
+            return nil
         }
+        // get id
+        guard let id: Int = data[ID] as? Int else {
+            return nil
+        }
+        // get name
+        guard let name: String = data[NAME] as! String! else {
+            return nil
+        }
+        // get uri
         guard let uri: String = data[URI] as! String! else {
-            return ""
+            return nil
         }
-        return uri
+        
+        let stage: Stage = Stage()
+        stage.setId(id)
+        stage.setName(name)
+        stage.setUri(uri)
+        
+        return stage
     }
 }

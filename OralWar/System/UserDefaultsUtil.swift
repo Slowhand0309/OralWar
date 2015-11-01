@@ -37,7 +37,7 @@ class UserDefaultsUtil {
             USER_DEFAULTS_KEY_DEBUG: true,
             USER_DEFAULTS_KEY_USER_ID: 0,
             USER_DEFAULTS_KEY_USER_NAME: "",
-            USER_DEFAULTS_KEY_USER_STAGE: 0,
+            USER_DEFAULTS_KEY_USER_STAGE: 1,
             USER_DEFAULTS_KEY_USER_ITEMLIST: [],
             USER_DEFAULTS_KEY_USER_BACTERIALIST: [],
             USER_DEFAULTS_KEY_USER_UPDATEDAT: 0
@@ -70,6 +70,7 @@ class UserDefaultsUtil {
         ud.setInteger(user.getId(), forKey: USER_DEFAULTS_KEY_USER_ID)
         ud.setObject(user.getName(), forKey: USER_DEFAULTS_KEY_USER_NAME)
         ud.setInteger(user.getScore(), forKey: USER_DEFAULTS_KEY_USER_SCORE)
+        ud.setInteger(user.getStage(), forKey: USER_DEFAULTS_KEY_USER_STAGE)
         ud.setObject(user.getItemlist(), forKey: USER_DEFAULTS_KEY_USER_ITEMLIST)
         ud.setObject(user.getBacterialist(), forKey: USER_DEFAULTS_KEY_USER_BACTERIALIST)
         ud.setObject(user.getUpdatedAt(), forKey: USER_DEFAULTS_KEY_USER_UPDATEDAT)
@@ -85,6 +86,7 @@ class UserDefaultsUtil {
         user.setId(ud.integerForKey(USER_DEFAULTS_KEY_USER_ID))
         user.setName(ud.stringForKey(USER_DEFAULTS_KEY_USER_NAME)!)
         user.setScore(ud.integerForKey(USER_DEFAULTS_KEY_USER_SCORE))
+        user.setStage(ud.integerForKey(USER_DEFAULTS_KEY_USER_STAGE))
         user.setItemlist(ud.arrayForKey(USER_DEFAULTS_KEY_USER_ITEMLIST) as! Array<Int>)
         user.setBacterialist(ud.arrayForKey(USER_DEFAULTS_KEY_USER_BACTERIALIST) as! Array<Int>)
         user.setUpdatedAt(ud.objectForKey(USER_DEFAULTS_KEY_USER_UPDATEDAT) as! NSTimeInterval)

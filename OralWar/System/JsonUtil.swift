@@ -9,6 +9,7 @@
 import Foundation
 
 let TYPE: String = "json"
+let ORAL_SCHEME_FILE: String = "oral://file/"
 
 // extension : add isEmpty func
 extension NSData {
@@ -29,6 +30,17 @@ class JsonUtil {
     
     init () {
         
+    }
+    
+    // parse json by uri scheme function
+    func parseJson(uri: String) -> AnyObject? {
+        if uri.hasPrefix(ORAL_SCHEME_FILE) {
+            // FILE
+            return parseJson(uri, type: JSON_FORMAT.FILE)
+        } else {
+            // URL
+            return parseJson(uri, type: JSON_FORMAT.URL)
+        }
     }
     
     // parse json function
