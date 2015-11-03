@@ -11,6 +11,7 @@ import Foundation
 // declare key for stage
 let STAGE_NO: String = "stage_no"
 let STAGE_NAME: String = "stage_name"
+let STAGE_DATA: String = "stage_data"
 
 // declare key for bacteria
 let ID: String = "id"
@@ -26,20 +27,30 @@ class ConvertUtil {
     // convert json -> OralPieceMap
     class func toOralPieceMap(jsonData: NSDictionary?) -> OralPieceMap? {
         
-        var no: Int
-        var name: String
-        let stageMap: OralPieceMap = OralPieceMap()
-        
         guard let data: NSDictionary = jsonData else {
             return nil
         }
-        
-        if let stageNo: Int = data[STAGE_NO] as? Int {
-            no = stageNo
+        // get stage no
+        guard let stageNo: Int = data[STAGE_NO] as? Int else {
+            return nil
+        }
+        // get stage name
+        guard let stageName: String = data[STAGE_NAME] as? String else {
+            return nil
+        }
+        // get stage data
+        guard let stageData: Array<UInt32> = data[STAGE_DATA] as? Array<UInt32> else {
+            return nil
         }
         
-        if let stageName: String = data[STAGE_NAME] as? String {
-            name = stageName
+        let stageMap: OralPieceMap = OralPieceMap()
+        stageMap.setNo(stageNo)
+        stageMap.setName(stageName)
+        
+        for var h = 0; h < HEIGHT; h++ {
+            for var w = 0; w < WIDTH; w++ {
+                stageMap[w, h] = PieceStatus(_status: stageData[h * HEIGHT + w])
+            }
         }
         return stageMap
     }

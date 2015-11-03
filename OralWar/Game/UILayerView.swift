@@ -82,15 +82,16 @@ class UILayerView: UIView {
         let debug = UserDefaultsUtil.getDebugMode()
         // show debug info
         if debug {
-            var debugMsg: String = "ID : " + String(userInfo.getId()) + "¥n"
-            debugMsg += "NAME : " + userInfo.getName() + "¥n"
-            debugMsg += "ITEM : " + String(userInfo.getItemlist().count) + "¥n"
-            debugMsg += "BACTERIA : " + String(userInfo.getBacterialist().count) + "¥n"
+            var debugMsg: String = "ID : " + String(userInfo.getId()) + ","
+            debugMsg += "NAME : " + userInfo.getName() + ","
+            debugMsg += "ITEM : " + String(userInfo.getItemlist().count) + ","
+            debugMsg += "BACTERIA : " + String(userInfo.getBacterialist().count)
             
             // set debug msg
             let debugLabel = UILabel()
             debugLabel.text = debugMsg
-            debugLabel.frame = CGRectMake(0, 0, 100, 40)
+            debugLabel.font = UIFont.systemFontOfSize(10)
+            debugLabel.frame = CGRectMake(0, 0, 200, 40)
             debugLabel.textColor = DEBUG_FONT_COLOR
             debugLabel.layer.position = CGPoint(x: frame.width - 100, y: UILAYER_TOP_Y)
             self.addSubview(debugLabel)
