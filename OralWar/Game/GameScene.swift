@@ -65,12 +65,14 @@ class GameScene: SKScene {
         print(uri)
         // get stage data
         guard let stageMapData = util.parseJson(uri) else {
-            return false
+            //return false
+            return true // TODO for debug
         }
         
         // convert oralpiecemap
         guard let oralPieceMap = ConvertUtil.toOralPieceMap(stageMapData as! NSDictionary) else {
-            return false
+            //return false
+            return true // TODO for debug
         }
         
         return true

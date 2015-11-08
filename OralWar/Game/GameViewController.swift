@@ -14,11 +14,15 @@ class GameViewController: UIViewController, onClickDelegate {
     // view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+
+    // view did appear
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
-            
+        
         /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
         /* Set the scale mode to scale to fit the window */
@@ -26,9 +30,22 @@ class GameViewController: UIViewController, onClickDelegate {
         scene.scaleMode = .Fill // for landscape
         skView.presentScene(scene)
         
-        setup(scene)
+        if !setup(scene) {
+            // error alert
+            let alertCtl = UIAlertController(title: "ERROR", message: "failed setup", preferredStyle: UIAlertControllerStyle.Alert)
+            let defaultAction:UIAlertAction = UIAlertAction(title: "OK",
+                style: UIAlertActionStyle.Default,
+                handler:{
+                    (action:UIAlertAction!) -> Void in
+                    let menuViewController = self.storyboard!
+                        .instantiateViewControllerWithIdentifier("menuview")
+                    self.presentViewController(menuViewController, animated: false, completion: nil)
+            })
+            alertCtl.addAction(defaultAction)
+            self.presentViewController(alertCtl, animated: true, completion: nil)
+        }
     }
-
+    
     // set up for ui, user info
     func setup(scene: GameScene) -> Bool {
         /* Set UI layer view */
@@ -42,8 +59,7 @@ class GameViewController: UIViewController, onClickDelegate {
         }
         scene.setUser(user)
         
-        scene.setUp()
-        return true
+        return scene.setUp()
     }
     
     override func shouldAutorotate() -> Bool {
