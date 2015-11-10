@@ -57,6 +57,8 @@ class UILayerView: UIView {
         guard let user = UserDefaultsUtil.getUserInfo() else {
             return
         }
+        setSwitchBacteriaButton()
+        setSwitchItemButton()
         printDebug(user)
     }
     
@@ -75,6 +77,16 @@ class UILayerView: UIView {
         button.addTarget(self, action: BUTTON_BACK_FUNCTION, forControlEvents: .TouchUpInside)
         
         self.addSubview(button)
+    }
+    
+    // set switch bacteria button
+    func setSwitchBacteriaButton() {
+        // TODO
+    }
+    
+    // set switch item button
+    func setSwitchItemButton() {
+        
     }
     
     // print for debug

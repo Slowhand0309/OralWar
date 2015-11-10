@@ -70,11 +70,9 @@ class GameScene: SKScene {
         }
         
         // convert oralpiecemap
-        guard let oralPieceMap = ConvertUtil.toOralPieceMap(stageMapData as! NSDictionary) else {
-            //return false
-            return true // TODO for debug
-        }
+        oralPieceMap = ConvertUtil.toOralPieceMap(stageMapData as! NSDictionary)
         
+        // TODO set info data to ui view
         return true
     }
     
