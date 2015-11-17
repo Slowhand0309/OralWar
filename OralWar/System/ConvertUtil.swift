@@ -21,6 +21,7 @@ let CYCLE: String = "cycle"
 // declare key for stagelist
 let NAME: String = "name"
 let URI: String = "uri"
+let IMG_URI: String = "img_uri"
 
 class ConvertUtil {
     
@@ -121,10 +122,16 @@ class ConvertUtil {
             return nil
         }
         
+        // get image uri
+        guard let img: String = data[IMG_URI] as! String! else {
+            return nil
+        }
+        
         let stage: Stage = Stage()
         stage.setId(id)
         stage.setName(name)
         stage.setUri(uri)
+        stage.setImageUri(img)
         
         return stage
     }

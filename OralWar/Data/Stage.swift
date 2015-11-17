@@ -13,11 +13,13 @@ class Stage {
     var id: Int // identifier
     var name: String // stage name
     var uri: String // stage uri
+    var imageUri: String // stage background image
     
     init () {
         id = 0
         name = ""
         uri = ""
+        imageUri = ""
     }
     
     // get id
@@ -48,5 +50,15 @@ class Stage {
     // set uri
     func setUri(uri: String) {
         self.uri = uri
+    }
+    
+    // get image uri
+    func getImageUri() -> String {
+        return imageUri
+    }
+    
+    // set image uri
+    func setImageUri(img: String) {
+        self.imageUri = img
     }
 }
