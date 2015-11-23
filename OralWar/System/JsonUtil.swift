@@ -36,7 +36,9 @@ class JsonUtil {
     func parseJson(uri: String) -> AnyObject? {
         if uri.hasPrefix(ORAL_SCHEME_FILE) {
             // FILE
-            return parseJson(uri, type: JSON_FORMAT.FILE)
+            // remove schene
+            let fileUri: String = uri.stringByReplacingOccurrencesOfString(ORAL_SCHEME_FILE, withString: "")
+            return parseJson(fileUri, type: JSON_FORMAT.FILE)
         } else {
             // URL
             return parseJson(uri, type: JSON_FORMAT.URL)

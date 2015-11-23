@@ -40,7 +40,7 @@ class ConvertUtil {
             return nil
         }
         // get stage data
-        guard let stageData: Array<UInt32> = data[STAGE_DATA] as? Array<UInt32> else {
+        guard let stageData: NSArray = data[STAGE_DATA] as? NSArray else {
             return nil
         }
         
@@ -50,7 +50,9 @@ class ConvertUtil {
         
         for var h = 0; h < HEIGHT; h++ {
             for var w = 0; w < WIDTH; w++ {
-                stageMap[w, h] = PieceStatus(_status: stageData[h * HEIGHT + w])
+                var t: Int = stageData[h * HEIGHT + w] as! Int
+                let value: UInt32 = UInt32(t)
+                stageMap[w, h] = PieceStatus(_status: value)
             }
         }
         return stageMap

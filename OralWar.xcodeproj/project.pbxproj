@@ -33,6 +33,7 @@
 		9EA720911BA711F100025EC0 /* bacterialist.js in Resources */ = {isa = PBXBuildFile; fileRef = 9EA7208F1BA711F100025EC0 /* bacterialist.js */; };
 		D30F1BBD1BC6AF41009FC993 /* ConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */; };
 		D30F1BBE1BC6AF41009FC993 /* ConvertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */; };
+		D3213C3B1C0335EF00B67EC4 /* stage001.json in Resources */ = {isa = PBXBuildFile; fileRef = D3213C3A1C0335EF00B67EC4 /* stage001.json */; };
 		D35622451B8E0981005BA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35622441B8E0981005BA000 /* AppDelegate.swift */; };
 		D356224E1B8E0981005BA000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D356224C1B8E0981005BA000 /* Main.storyboard */; };
 		D35622501B8E0981005BA000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D356224F1B8E0981005BA000 /* Images.xcassets */; };
@@ -95,6 +96,7 @@
 		9EA7208E1BA711F100025EC0 /* bacterialist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bacterialist.css; path = www/bacterialist/bacterialist.css; sourceTree = "<group>"; };
 		9EA7208F1BA711F100025EC0 /* bacterialist.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = bacterialist.js; path = www/bacterialist/bacterialist.js; sourceTree = "<group>"; };
 		D30F1BBC1BC6AF41009FC993 /* ConvertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvertUtil.swift; path = System/ConvertUtil.swift; sourceTree = "<group>"; };
+		D3213C3A1C0335EF00B67EC4 /* stage001.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stage001.json; path = res/json/stage001.json; sourceTree = "<group>"; };
 		D356223F1B8E0981005BA000 /* OralWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OralWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35622431B8E0981005BA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35622441B8E0981005BA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F2C1DC1BCD5161000B085F /* stagelist.json */,
+				D3213C3A1C0335EF00B67EC4 /* stage001.json */,
 			);
 			name = json;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			files = (
 				D3B14E761BA4F08A006E26A6 /* menu_bg.png in Resources */,
 				D3CDFDE81BB44C3600CC1D1E /* icons.woff2 in Resources */,
+				D3213C3B1C0335EF00B67EC4 /* stage001.json in Resources */,
 				D3B14E741BA4EDC0006E26A6 /* itemlist.html in Resources */,
 				D3B14E6E1BA4ED92006E26A6 /* menu.js in Resources */,
 				D3BBDB8A1BD5496200DCB254 /* chip_pumpkin1.png in Resources */,

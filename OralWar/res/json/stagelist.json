@@ -2,19 +2,19 @@
   {
   "id": 1,
   "name": "Stage1",
-  "uri": "stage001.json",
+  "uri": "oral://file/stage001",
   "img_uri": "stage001.png"
   },
   {
   "id": 2,
   "name": "Stage2",
-  "uri": "stage002.json",
+  "uri": "oral://file/stage002",
   "img_uri": "stage002.png"
   },
   {
   "id": 3,
   "name": "Stage3",
-  "uri": "stage003.json",
+  "uri": "oral://file/stage003",
   "img_uri": "stage003.png"
   }
 ]
