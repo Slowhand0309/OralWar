@@ -19,6 +19,9 @@
 		9E0C30DC1BAF06F200A185FD /* PieceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0C30D81BAF06F200A185FD /* PieceStatus.swift */; };
 		9E28E4561BE64C330070D2D8 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E28E4551BE64C330070D2D8 /* Stage.swift */; };
 		9E28E4571BE64C330070D2D8 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E28E4551BE64C330070D2D8 /* Stage.swift */; };
+		9E3079C51C0C984600F444FC /* doorknob.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3079C31C0C984600F444FC /* doorknob.png */; };
+		9E3079C61C0C984600F444FC /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3079C41C0C984600F444FC /* pencil.png */; };
+		9E8109331C0AEE91001D86E6 /* itemlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E8109321C0AEE91001D86E6 /* itemlist.json */; };
 		9E90FBAA1BC40ED700F7A090 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90FBA91BC40ED700F7A090 /* Item.swift */; };
 		9E90FBAB1BC40ED700F7A090 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90FBA91BC40ED700F7A090 /* Item.swift */; };
 		9E90FBAD1BC4188D00F7A090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90FBAC1BC4188D00F7A090 /* User.swift */; };
@@ -87,6 +90,9 @@
 		9E0C30D71BAF06F200A185FD /* OralPieceMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OralPieceMap.swift; path = System/OralPieceMap.swift; sourceTree = "<group>"; };
 		9E0C30D81BAF06F200A185FD /* PieceStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PieceStatus.swift; path = System/PieceStatus.swift; sourceTree = "<group>"; };
 		9E28E4551BE64C330070D2D8 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = Data/Stage.swift; sourceTree = "<group>"; };
+		9E3079C31C0C984600F444FC /* doorknob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doorknob.png; path = res/item/doorknob.png; sourceTree = "<group>"; };
+		9E3079C41C0C984600F444FC /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pencil.png; path = res/item/pencil.png; sourceTree = "<group>"; };
+		9E8109321C0AEE91001D86E6 /* itemlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = itemlist.json; path = res/json/itemlist.json; sourceTree = "<group>"; };
 		9E90FBA91BC40ED700F7A090 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Data/Item.swift; sourceTree = "<group>"; };
 		9E90FBAC1BC4188D00F7A090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Data/User.swift; sourceTree = "<group>"; };
 		9E90FBAF1BC4193000F7A090 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsUtil.swift; path = System/UserDefaultsUtil.swift; sourceTree = "<group>"; };
@@ -303,6 +309,8 @@
 		D3BBDB881BD53A5C00DCB254 /* item */ = {
 			isa = PBXGroup;
 			children = (
+				9E3079C31C0C984600F444FC /* doorknob.png */,
+				9E3079C41C0C984600F444FC /* pencil.png */,
 			);
 			name = item;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 		D3F2C1DB1BCD4F53000B085F /* json */ = {
 			isa = PBXGroup;
 			children = (
+				9E8109321C0AEE91001D86E6 /* itemlist.json */,
 				D3F2C1DC1BCD5161000B085F /* stagelist.json */,
 				D3213C3A1C0335EF00B67EC4 /* stage001.json */,
 			);
@@ -448,7 +457,9 @@
 				D3BBDB861BD53A4E00DCB254 /* backtooth01.png in Resources */,
 				D3B14E6D1BA4ED92006E26A6 /* menu.html in Resources */,
 				9EA7208D1BA711DE00025EC0 /* itemlist.js in Resources */,
+				9E8109331C0AEE91001D86E6 /* itemlist.json in Resources */,
 				D3CDFDE51BB44C3600CC1D1E /* icons.svg in Resources */,
+				9E3079C51C0C984600F444FC /* doorknob.png in Resources */,
 				D35622501B8E0981005BA000 /* Images.xcassets in Resources */,
 				9EA7208C1BA711DE00025EC0 /* itemlist.css in Resources */,
 				D3CDFDE41BB44C3600CC1D1E /* icons.eot in Resources */,
@@ -457,6 +468,7 @@
 				D3CDFDDD1BB44B3A00CC1D1E /* button.min.css in Resources */,
 				D356224E1B8E0981005BA000 /* Main.storyboard in Resources */,
 				9EA720911BA711F100025EC0 /* bacterialist.js in Resources */,
+				9E3079C61C0C984600F444FC /* pencil.png in Resources */,
 				D3CDFDDE1BB44B3A00CC1D1E /* icon.min.css in Resources */,
 				D3CDFDE61BB44C3600CC1D1E /* icons.ttf in Resources */,
 			);
