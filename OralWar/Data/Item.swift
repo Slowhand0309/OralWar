@@ -21,6 +21,7 @@ class Item {
     
     var id: Int // identifier
     var name: String // item name
+    var uri: String // item uri
     var effectType: EffectType // item effect type
     var effectValue: Int // item effect value
 
@@ -29,6 +30,7 @@ class Item {
         id = 0
         name = ""
         effectType = EffectType.none
+        uri = ""
         effectValue = 0
     }
     
@@ -50,6 +52,16 @@ class Item {
     // set item name
     func setName(_ name: String) {
         self.name = name
+    }
+    
+    // get item uri
+    func getUri() -> String {
+        return uri
+    }
+    
+    // set item uri
+    func setUri(uri: String) {
+        self.uri = uri
     }
     
     // get item effect type
