@@ -13,19 +13,19 @@ import SpriteKit
 class ActionMgr {
  
     // create action for bacteria
-    func createAction(type: AnimationType) -> ActionBase? {
+    func createAction(_ type: AnimationType) -> ActionBase? {
         var action: ActionBase?
         switch type {
-        case AnimationType.STAY_TYPE: // stay here
+        case AnimationType.stay_TYPE: // stay here
             break
-        case AnimationType.FRONT_BACK_TYPE: // move front back
+        case AnimationType.front_BACK_TYPE: // move front back
             break
-        case AnimationType.LEFT_RIGHT_TYPE: // move left right
+        case AnimationType.left_RIGHT_TYPE: // move left right
             break
-        case AnimationType.CIRCLE_TYPE: // move circle
+        case AnimationType.circle_TYPE: // move circle
             action = ActionRotation(isRight: true)
             break
-        case AnimationType.RANDAM_TYPE: // move randam
+        case AnimationType.randam_TYPE: // move randam
             break
         }
         return action

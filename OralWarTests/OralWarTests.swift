@@ -74,7 +74,7 @@ class OralWarTests: XCTestCase {
         // test1 get json data and parse
         let url: String = "stagelist"; // change test url
         let util: JsonUtil = JsonUtil()
-        let data = util.parseJson(url, type: JSON_FORMAT.FILE)
+        let data = util.parseJson(url, type: JSON_FORMAT.file)
         
         XCTAssertNotNil(data)
         let obj: NSArray = (data as? NSArray)!
@@ -88,7 +88,7 @@ class OralWarTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure() {
             // Put the code you want to measure the time of here.
         }
     }

@@ -21,12 +21,12 @@ class GameScene: SKScene {
     }
     
     // set user info
-    func setUser(user: User) {
+    func setUser(_ user: User) {
         self.user = user
     }
     
     // set ui layer
-    func setUiLayerView(view: UILayerView) {
+    func setUiLayerView(_ view: UILayerView) {
         uiView = view
         self.view!.addSubview(uiView)
     }
@@ -42,7 +42,7 @@ class GameScene: SKScene {
         
         // read stagelist.json
         let util: JsonUtil = JsonUtil()
-        let data = util.parseJson(STAGELIST, type: JSON_FORMAT.FILE)
+        let data = util.parseJson(STAGELIST, type: JSON_FORMAT.file)
         guard let stageData: NSArray = data as? NSArray else {
             return false
         }
@@ -79,12 +79,12 @@ class GameScene: SKScene {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         
         // show background for debug
         let backtooth = SKSpriteNode(imageNamed: "backtooth01.png")
         backtooth.size = self.size
-        backtooth.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2)
+        backtooth.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         self.addChild(backtooth)
         
         print("w : \(self.size.width), y : \(self.size.height)")
@@ -92,7 +92,7 @@ class GameScene: SKScene {
         // TODO for debug
         let ary = TextureUtil.loadDivImage("chip_pumpkin1.png", col: 3, row: 4)
         let node: SKSpriteNode = SKSpriteNode(texture: ary[0])
-        node.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2)
+        node.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         node.name = "pumpkin"
         //let action: SKAction = SKAction.animateWithTextures(ary, timePerFrame: 0.2)
         //let forever: SKAction = SKAction.repeatActionForever(action)
@@ -100,21 +100,21 @@ class GameScene: SKScene {
         self.addChild(node)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         if let touch = touches.first as UITouch! {
-            let location = touch.locationInView(self.view)
+            let location = touch.location(in: self.view)
             let newlocation = CGPoint(x: location.x, y: self.size.height - location.y)
             
             // TODO for debug
             print(location)
-            let node = self.childNodeWithName("pumpkin")
-            let action = SKAction.moveTo(newlocation, duration: 1.0)
-            node?.runAction(action)
+            let node = self.childNode(withName: "pumpkin")
+            let action = SKAction.move(to: newlocation, duration: 1.0)
+            node?.run(action)
         }
     }
    
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
 }

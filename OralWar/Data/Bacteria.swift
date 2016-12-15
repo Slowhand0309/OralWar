@@ -10,16 +10,16 @@ import Foundation
 
 // move animation type
 enum AnimationType {
-    case STAY_TYPE // stay here
-    case FRONT_BACK_TYPE // move front back
-    case LEFT_RIGHT_TYPE // move left right
-    case CIRCLE_TYPE // move circle
-    case RANDAM_TYPE // move randam
+    case stay_TYPE // stay here
+    case front_BACK_TYPE // move front back
+    case left_RIGHT_TYPE // move left right
+    case circle_TYPE // move circle
+    case randam_TYPE // move randam
 }
 
 enum ExpandType {
     // not implement ver 1.0
-    case NONE
+    case none
 }
 
 class Bacteria {
@@ -34,8 +34,8 @@ class Bacteria {
         id = 0
         rate = 0.0
         cycle = 0
-        animType = AnimationType.STAY_TYPE
-        expandType = ExpandType.NONE
+        animType = AnimationType.stay_TYPE
+        expandType = ExpandType.none
     }
     
     // set id
@@ -44,7 +44,7 @@ class Bacteria {
     }
     
     // get id
-    func setId(id: Int) {
+    func setId(_ id: Int) {
         self.id = id
     }
     
@@ -54,7 +54,7 @@ class Bacteria {
     }
     
     // set rate
-    func setRate(rate: Float) {
+    func setRate(_ rate: Float) {
         self.rate = rate
     }
     
@@ -64,7 +64,7 @@ class Bacteria {
     }
     
     // set cyclle
-    func setCycle(cycle: Int) {
+    func setCycle(_ cycle: Int) {
         self.cycle = cycle
     }
     
@@ -74,7 +74,7 @@ class Bacteria {
     }
     
     // set animation type
-    func setAnimType(animType: AnimationType) {
+    func setAnimType(_ animType: AnimationType) {
         self.animType = animType
     }
 }

@@ -8,11 +8,11 @@
 
 // item effect type
 enum EffectType {
-    case NONE // no effect
-    case TIME // effect to time
-    case DIG // effect to dig
-    case MOVE_RATE // effect to move rate
-    case MOVE_SPD // effect to move speed
+    case none // no effect
+    case time // effect to time
+    case dig // effect to dig
+    case move_RATE // effect to move rate
+    case move_SPD // effect to move speed
 }
 import Foundation
 
@@ -28,7 +28,7 @@ class Item {
     init () {
         id = 0
         name = ""
-        effectType = EffectType.NONE
+        effectType = EffectType.none
         effectValue = 0
     }
     
@@ -38,7 +38,7 @@ class Item {
     }
     
     // set item id
-    func setId(id: Int) {
+    func setId(_ id: Int) {
         self.id = id
     }
     
@@ -48,7 +48,7 @@ class Item {
     }
     
     // set item name
-    func setName(name: String) {
+    func setName(_ name: String) {
         self.name = name
     }
     
@@ -58,7 +58,7 @@ class Item {
     }
     
     // set item effect type
-    func setEffectType(effectType: EffectType) {
+    func setEffectType(_ effectType: EffectType) {
         self.effectType = effectType
     }
     
@@ -68,7 +68,7 @@ class Item {
     }
     
     // set item effect value
-    func setEffectValue(effectValue: Int) {
+    func setEffectValue(_ effectValue: Int) {
         self.effectValue = effectValue
     }
 }

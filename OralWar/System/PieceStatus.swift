@@ -8,11 +8,11 @@
 
 import Foundation
 
-public class PieceStatus {
+open class PieceStatus {
 
     // status 32bit |     1byte    |     2byte    |     3byte     |      4byte    |
     //              |Being bacteria|   Hardness   |     Item      |     Fellow    |
-    private var status: UInt32
+    fileprivate var status: UInt32
     
     // initialize
     public init (_status: UInt32) {

@@ -28,7 +28,7 @@ class Stage {
     }
     
     // set id
-    func setId(id: Int) {
+    func setId(_ id: Int) {
         self.id = id
     }
 
@@ -38,7 +38,7 @@ class Stage {
     }
 
     // set name
-    func setName(name: String) {
+    func setName(_ name: String) {
         self.name = name
     }
     
@@ -48,7 +48,7 @@ class Stage {
     }
     
     // set uri
-    func setUri(uri: String) {
+    func setUri(_ uri: String) {
         self.uri = uri
     }
     
@@ -58,7 +58,7 @@ class Stage {
     }
     
     // set image uri
-    func setImageUri(img: String) {
+    func setImageUri(_ img: String) {
         self.imageUri = img
     }
 }

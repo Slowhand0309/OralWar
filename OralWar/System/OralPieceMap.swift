@@ -22,17 +22,17 @@ class OralPieceMap {
     init() {
         no = 0
         name = ""
-        pieces = Array(count: WIDTH * HEIGHT,
-            repeatedValue: PieceStatus(_status: 0))
+        pieces = Array(repeating: PieceStatus(_status: 0),
+            count: WIDTH * HEIGHT)
     }
     
     // get stage no
-    func setNo(no: Int) {
+    func setNo(_ no: Int) {
         self.no = no
     }
     
     // get stage name
-    func setName(name: String) {
+    func setName(_ name: String) {
         self.name = name
     }
     
@@ -52,7 +52,7 @@ class OralPieceMap {
     }
     
     // range check
-    func isRange(w :Int, h :Int) -> Bool {
+    func isRange(_ w :Int, h :Int) -> Bool {
         if w < 0 || w > WIDTH
             || h < 0 || h > HEIGHT {
                 return false

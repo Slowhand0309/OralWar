@@ -26,7 +26,7 @@ let IMG_URI: String = "img_uri"
 class ConvertUtil {
     
     // convert json -> OralPieceMap
-    class func toOralPieceMap(jsonData: NSDictionary?) -> OralPieceMap? {
+    class func toOralPieceMap(_ jsonData: NSDictionary?) -> OralPieceMap? {
         
         guard let data: NSDictionary = jsonData else {
             return nil
@@ -48,8 +48,8 @@ class ConvertUtil {
         stageMap.setNo(stageNo)
         stageMap.setName(stageName)
         
-        for var h = 0; h < HEIGHT; h++ {
-            for var w = 0; w < WIDTH; w++ {
+        for h in 0 ..< HEIGHT {
+            for w in 0 ..< WIDTH {
                 var t: Int = stageData[h * HEIGHT + w] as! Int
                 let value: UInt32 = UInt32(t)
                 stageMap[w, h] = PieceStatus(_status: value)
@@ -59,7 +59,7 @@ class ConvertUtil {
     }
     
     // convert json data -> Bacteria
-    class func toBacteria(jsonData: NSDictionary?) -> Bacteria? {
+    class func toBacteria(_ jsonData: NSDictionary?) -> Bacteria? {
         guard let data: NSDictionary = jsonData else {
             return nil
         }
@@ -86,7 +86,7 @@ class ConvertUtil {
     }
     
     // convert json data -> Item
-    class func toItem(jsonData: NSDictionary?) -> Item? {
+    class func toItem(_ jsonData: NSDictionary?) -> Item? {
         guard let data: NSDictionary = jsonData else {
             return nil
         }
@@ -106,7 +106,7 @@ class ConvertUtil {
     }
     
     // get stage uri
-    class func toStage(jsonData: NSDictionary?) -> Stage? {
+    class func toStage(_ jsonData: NSDictionary?) -> Stage? {
         
         guard let data: NSDictionary = jsonData else {
             return nil

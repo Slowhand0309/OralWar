@@ -34,9 +34,9 @@ class MenuViewController: UIViewController, UIWebViewDelegate {
     }
     
     // handling event
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
-        let url = request.URL!.absoluteString
+        let url = request.url!.absoluteString
         if url.hasPrefix(ORAL_SCHEME) {
             
             if url == GAME_VIEW_URL {
@@ -52,34 +52,34 @@ class MenuViewController: UIViewController, UIWebViewDelegate {
     }
 
     // Screen transition GameViewController.
-    private func startGame() {
+    fileprivate func startGame() {
         let gameViewController = self.storyboard!
-            .instantiateViewControllerWithIdentifier("gameview") 
-        self.presentViewController(gameViewController, animated: false, completion: nil)
+            .instantiateViewController(withIdentifier: "gameview") 
+        self.present(gameViewController, animated: false, completion: nil)
     }
     
     // location change
-    private func locationChanged(res :String) {
-        let url = NSBundle.mainBundle().pathForResource(res, ofType: "html");
-        let reqURL = NSURL(string: url!)
-        let req = NSURLRequest(URL: reqURL!)
+    fileprivate func locationChanged(_ res :String) {
+        let url = Bundle.main.path(forResource: res, ofType: "html");
+        let reqURL = URL(string: url!)
+        let req = URLRequest(url: reqURL!)
         webView.loadRequest(req)
     }
     
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return false
     }
     
     // Fix orientation of the screen to landscape at swift2
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Landscape
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }

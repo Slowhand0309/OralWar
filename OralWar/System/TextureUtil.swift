@@ -12,7 +12,7 @@ import SpriteKit
 class TextureUtil {
     
     // load divid image file
-    class func loadDivImage(imgName: String, col: Int, row: Int) -> Array<SKTexture> {
+    class func loadDivImage(_ imgName: String, col: Int, row: Int) -> Array<SKTexture> {
         
         let srcTexture: SKTexture = SKTexture(imageNamed: imgName)
         
@@ -24,11 +24,11 @@ class TextureUtil {
         
         var array: Array<SKTexture> = Array<SKTexture>()
         
-        for (var i = 0; i < col; i++) {
-            for (var j = 0; j < row; j++) {
+        for i in 0 ..< col {
+            for j in 0 ..< row {
                 let x = CGFloat(i) * w
                 let y = CGFloat(j) * h
-                let texture: SKTexture = SKTexture(rect: CGRectMake(x, y, w, h), inTexture: srcTexture)
+                let texture: SKTexture = SKTexture(rect: CGRect(x: x, y: y, width: w, height: h), in: srcTexture)
                 array.append(texture)
             }
         }

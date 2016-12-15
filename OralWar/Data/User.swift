@@ -17,7 +17,7 @@ class User {
     var score: Int // user score
     var itemlist: [Int] = [] // user has itemlist
     var bacterialist: [Int] = [] // user has bacterialist
-    var updatedat: NSTimeInterval
+    var updatedat: TimeInterval
     
     init () {
         id = 0
@@ -33,7 +33,7 @@ class User {
     }
     
     // set id
-    func setId(id: Int) {
+    func setId(_ id: Int) {
         self.id = id
     }
     
@@ -43,7 +43,7 @@ class User {
     }
     
     // set user name
-    func setName(name: String) {
+    func setName(_ name: String) {
         self.name = name
     }
     
@@ -53,7 +53,7 @@ class User {
     }
     
     // set current stage
-    func setStage(stage: Int) {
+    func setStage(_ stage: Int) {
         self.stage = stage
     }
     
@@ -63,7 +63,7 @@ class User {
     }
     
     // set user score
-    func setScore(score: Int) {
+    func setScore(_ score: Int) {
         self.score = score
     }
     
@@ -73,12 +73,12 @@ class User {
     }
     
     // set user item list
-    func setItemlist(list: Array<Int>) {
+    func setItemlist(_ list: Array<Int>) {
         self.itemlist = list
     }
     
     // add user item list
-    func addItemList(id: Int) {
+    func addItemList(_ id: Int) {
         self.itemlist.append(id)
     }
     
@@ -88,22 +88,22 @@ class User {
     }
     
     // set user bacteria list
-    func setBacterialist(list: Array<Int>) {
+    func setBacterialist(_ list: Array<Int>) {
         self.bacterialist = list
     }
     
     // add user bacteria list
-    func addBacterialist(id: Int) {
+    func addBacterialist(_ id: Int) {
         self.bacterialist.append(id)
     }
     
     // get updated at
-    func getUpdatedAt() -> NSTimeInterval {
+    func getUpdatedAt() -> TimeInterval {
         return updatedat
     }
     
     // set updated at
-    func setUpdatedAt(time: NSTimeInterval) {
+    func setUpdatedAt(_ time: TimeInterval) {
         self.updatedat = time
     }
 }

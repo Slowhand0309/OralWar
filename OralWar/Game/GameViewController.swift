@@ -17,7 +17,7 @@ class GameViewController: UIViewController, onClickDelegate {
     }
 
     // view did appear
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let skView = self.view as! SKView
         skView.showsFPS = true
@@ -27,27 +27,27 @@ class GameViewController: UIViewController, onClickDelegate {
         skView.ignoresSiblingOrder = true
         /* Set the scale mode to scale to fit the window */
         let scene = GameScene(size: view.frame.size)
-        scene.scaleMode = .Fill // for landscape
+        scene.scaleMode = .fill // for landscape
         skView.presentScene(scene)
         
         if !setup(scene) {
             // error alert
-            let alertCtl = UIAlertController(title: "ERROR", message: "failed setup", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertCtl = UIAlertController(title: "ERROR", message: "failed setup", preferredStyle: UIAlertControllerStyle.alert)
             let defaultAction:UIAlertAction = UIAlertAction(title: "OK",
-                style: UIAlertActionStyle.Default,
+                style: UIAlertActionStyle.default,
                 handler:{
                     (action:UIAlertAction!) -> Void in
                     let menuViewController = self.storyboard!
-                        .instantiateViewControllerWithIdentifier("menuview")
-                    self.presentViewController(menuViewController, animated: false, completion: nil)
+                        .instantiateViewController(withIdentifier: "menuview")
+                    self.present(menuViewController, animated: false, completion: nil)
             })
             alertCtl.addAction(defaultAction)
-            self.presentViewController(alertCtl, animated: true, completion: nil)
+            self.present(alertCtl, animated: true, completion: nil)
         }
     }
     
     // set up for ui, user info
-    func setup(scene: GameScene) -> Bool {
+    func setup(_ scene: GameScene) -> Bool {
         /* Set UI layer view */
         let uiView = UILayerView(frame: self.view!.frame)
         uiView.setDelegate(self)
@@ -62,13 +62,13 @@ class GameViewController: UIViewController, onClickDelegate {
         return scene.setUp()
     }
     
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return false
     }
 
     // Fix orientation of the screen to landscape at swift2
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Landscape
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,14 +76,14 @@ class GameViewController: UIViewController, onClickDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
     // back menu view
-    func onClickBack(sender: UIButton) {
+    func onClickBack(_ sender: UIButton) {
         let menuViewController = self.storyboard!
-            .instantiateViewControllerWithIdentifier("menuview")
-        self.presentViewController(menuViewController, animated: false, completion: nil)
+            .instantiateViewController(withIdentifier: "menuview")
+        self.present(menuViewController, animated: false, completion: nil)
     }
 }

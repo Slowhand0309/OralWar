@@ -13,7 +13,7 @@ import UIKit
 protocol onClickDelegate {
     
     // call on click backbutton
-    func onClickBack(sender: UIButton)
+    func onClickBack(_ sender: UIButton)
 }
 
 // View for UILayer
@@ -22,14 +22,14 @@ class UILayerView: UIView {
     // unify top y position
     let UILAYER_TOP_Y: CGFloat = 30.0
     // declare button rect size
-    let BUTTON_RECT = CGRectMake(0, 0, 100, 40)
+    let BUTTON_RECT = CGRect(x: 0, y: 0, width: 100, height: 40)
     // declare back button text
     let BUTTON_BACK_TEXT = "BACK"
     // declare function for click back button
-    let BUTTON_BACK_FUNCTION: Selector = "onClickBack:"
+    let BUTTON_BACK_FUNCTION: Selector = #selector(UILayerView.onClickBack(_:))
     
     // declare debug font color
-    let DEBUG_FONT_COLOR = UIColor.whiteColor()
+    let DEBUG_FONT_COLOR = UIColor.white
     
     var delegate: onClickDelegate!
     
@@ -44,12 +44,12 @@ class UILayerView: UIView {
     }
 
     // set delegate
-    func setDelegate(_delegate :onClickDelegate) {
+    func setDelegate(_ _delegate :onClickDelegate) {
         delegate = _delegate
     }
     
     // setup
-    func setup(frame: CGRect) {
+    func setup(_ frame: CGRect) {
 
         setBackButton()
 
@@ -67,14 +67,14 @@ class UILayerView: UIView {
         // set back button
         let button = UIButton()
         button.frame = BUTTON_RECT
-        button.backgroundColor = UIColor.redColor()
+        button.backgroundColor = UIColor.red
         button.layer.masksToBounds = true
-        button.setTitle(BUTTON_BACK_TEXT, forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Highlighted)
+        button.setTitle(BUTTON_BACK_TEXT, for: UIControlState())
+        button.setTitleColor(UIColor.white, for: UIControlState())
+        button.setTitleColor(UIColor.yellow, for: UIControlState.highlighted)
         button.layer.cornerRadius = 5.0
         button.layer.position = CGPoint(x: frame.width / 6, y: UILAYER_TOP_Y)
-        button.addTarget(self, action: BUTTON_BACK_FUNCTION, forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: BUTTON_BACK_FUNCTION, for: .touchUpInside)
         
         self.addSubview(button)
     }
@@ -90,7 +90,7 @@ class UILayerView: UIView {
     }
     
     // print for debug
-    func printDebug(userInfo: User) {
+    func printDebug(_ userInfo: User) {
         let debug = UserDefaultsUtil.getDebugMode()
         // show debug info
         if debug {
@@ -102,8 +102,8 @@ class UILayerView: UIView {
             // set debug msg
             let debugLabel = UILabel()
             debugLabel.text = debugMsg
-            debugLabel.font = UIFont.systemFontOfSize(10)
-            debugLabel.frame = CGRectMake(0, 0, 200, 40)
+            debugLabel.font = UIFont.systemFont(ofSize: 10)
+            debugLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 40)
             debugLabel.textColor = DEBUG_FONT_COLOR
             debugLabel.layer.position = CGPoint(x: frame.width - 100, y: UILAYER_TOP_Y)
             self.addSubview(debugLabel)
@@ -114,7 +114,7 @@ class UILayerView: UIView {
     }
     
     // call when click back button
-    func onClickBack(sender: UIButton) {
+    func onClickBack(_ sender: UIButton) {
         if let d = delegate {
             d.onClickBack(sender)
         }

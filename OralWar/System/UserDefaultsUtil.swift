@@ -30,7 +30,7 @@ class UserDefaultsUtil {
     
     // set default values
     class func initUserDefaults() {
-        guard let ud: NSUserDefaults = NSUserDefaults.standardUserDefaults() else {
+        guard let ud: UserDefaults = UserDefaults.standard else {
             return
         }
         let register = [
@@ -41,55 +41,55 @@ class UserDefaultsUtil {
             USER_DEFAULTS_KEY_USER_ITEMLIST: [],
             USER_DEFAULTS_KEY_USER_BACTERIALIST: [],
             USER_DEFAULTS_KEY_USER_UPDATEDAT: 0
-        ]
-        ud.registerDefaults(register)
+        ] as [String : Any]
+        ud.register(defaults: register)
     }
     
     // put debug mode
-    class func putDebugMode(debug: Bool) {
-        guard let ud: NSUserDefaults = NSUserDefaults.standardUserDefaults() else {
+    class func putDebugMode(_ debug: Bool) {
+        guard let ud: UserDefaults = UserDefaults.standard else {
             return
         }
-        ud.setBool(debug, forKey: USER_DEFAULTS_KEY_DEBUG)
+        ud.set(debug, forKey: USER_DEFAULTS_KEY_DEBUG)
         ud.synchronize()
     }
     
     // get debug mode
     class func getDebugMode() -> Bool {
-        guard let ud: NSUserDefaults = NSUserDefaults.standardUserDefaults() else {
+        guard let ud: UserDefaults = UserDefaults.standard else {
             return false
         }
-        return ud.boolForKey(USER_DEFAULTS_KEY_DEBUG)
+        return ud.bool(forKey: USER_DEFAULTS_KEY_DEBUG)
     }
     
     // put user info
-    class func putUserInfo(user: User) {
-        guard let ud: NSUserDefaults = NSUserDefaults.standardUserDefaults() else {
+    class func putUserInfo(_ user: User) {
+        guard let ud: UserDefaults = UserDefaults.standard else {
             return
         }
-        ud.setInteger(user.getId(), forKey: USER_DEFAULTS_KEY_USER_ID)
-        ud.setObject(user.getName(), forKey: USER_DEFAULTS_KEY_USER_NAME)
-        ud.setInteger(user.getScore(), forKey: USER_DEFAULTS_KEY_USER_SCORE)
-        ud.setInteger(user.getStage(), forKey: USER_DEFAULTS_KEY_USER_STAGE)
-        ud.setObject(user.getItemlist(), forKey: USER_DEFAULTS_KEY_USER_ITEMLIST)
-        ud.setObject(user.getBacterialist(), forKey: USER_DEFAULTS_KEY_USER_BACTERIALIST)
-        ud.setObject(user.getUpdatedAt(), forKey: USER_DEFAULTS_KEY_USER_UPDATEDAT)
+        ud.set(user.getId(), forKey: USER_DEFAULTS_KEY_USER_ID)
+        ud.set(user.getName(), forKey: USER_DEFAULTS_KEY_USER_NAME)
+        ud.set(user.getScore(), forKey: USER_DEFAULTS_KEY_USER_SCORE)
+        ud.set(user.getStage(), forKey: USER_DEFAULTS_KEY_USER_STAGE)
+        ud.set(user.getItemlist(), forKey: USER_DEFAULTS_KEY_USER_ITEMLIST)
+        ud.set(user.getBacterialist(), forKey: USER_DEFAULTS_KEY_USER_BACTERIALIST)
+        ud.set(user.getUpdatedAt(), forKey: USER_DEFAULTS_KEY_USER_UPDATEDAT)
         ud.synchronize()
     }
     
     // get user info
     class func getUserInfo() -> User? {
-        guard let ud: NSUserDefaults = NSUserDefaults.standardUserDefaults() else {
+        guard let ud: UserDefaults = UserDefaults.standard else {
             return nil
         }
         let user: User = User()
-        user.setId(ud.integerForKey(USER_DEFAULTS_KEY_USER_ID))
-        user.setName(ud.stringForKey(USER_DEFAULTS_KEY_USER_NAME)!)
-        user.setScore(ud.integerForKey(USER_DEFAULTS_KEY_USER_SCORE))
-        user.setStage(ud.integerForKey(USER_DEFAULTS_KEY_USER_STAGE))
-        user.setItemlist(ud.arrayForKey(USER_DEFAULTS_KEY_USER_ITEMLIST) as! Array<Int>)
-        user.setBacterialist(ud.arrayForKey(USER_DEFAULTS_KEY_USER_BACTERIALIST) as! Array<Int>)
-        user.setUpdatedAt(ud.objectForKey(USER_DEFAULTS_KEY_USER_UPDATEDAT) as! NSTimeInterval)
+        user.setId(ud.integer(forKey: USER_DEFAULTS_KEY_USER_ID))
+        user.setName(ud.string(forKey: USER_DEFAULTS_KEY_USER_NAME)!)
+        user.setScore(ud.integer(forKey: USER_DEFAULTS_KEY_USER_SCORE))
+        user.setStage(ud.integer(forKey: USER_DEFAULTS_KEY_USER_STAGE))
+        user.setItemlist(ud.array(forKey: USER_DEFAULTS_KEY_USER_ITEMLIST) as! Array<Int>)
+        user.setBacterialist(ud.array(forKey: USER_DEFAULTS_KEY_USER_BACTERIALIST) as! Array<Int>)
+        user.setUpdatedAt(ud.object(forKey: USER_DEFAULTS_KEY_USER_UPDATEDAT) as! TimeInterval)
         return user
     }
 }

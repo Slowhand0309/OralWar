@@ -12,17 +12,17 @@ let TYPE: String = "json"
 let ORAL_SCHEME_FILE: String = "oral://file/"
 
 // extension : add isEmpty func
-extension NSData {
+extension Data {
     
     func isEmpty() -> Bool {
-        return self.length == 0
+        return self.count == 0
     }
 }
 
 // declare json parse from format
 enum JSON_FORMAT {
-    case URL
-    case FILE
+    case url
+    case file
 }
 
 // class json utility
@@ -33,71 +33,71 @@ class JsonUtil {
     }
     
     // parse json by uri scheme function
-    func parseJson(uri: String) -> AnyObject? {
+    func parseJson(_ uri: String) -> Any? {
         if uri.hasPrefix(ORAL_SCHEME_FILE) {
             // FILE
             // remove schene
-            let fileUri: String = uri.stringByReplacingOccurrencesOfString(ORAL_SCHEME_FILE, withString: "")
-            return parseJson(fileUri, type: JSON_FORMAT.FILE)
+            let fileUri: String = uri.replacingOccurrences(of: ORAL_SCHEME_FILE, with: "")
+            return parseJson(fileUri, type: JSON_FORMAT.file)
         } else {
             // URL
-            return parseJson(uri, type: JSON_FORMAT.URL)
+            return parseJson(uri, type: JSON_FORMAT.url)
         }
     }
     
     // parse json function
-    func parseJson(uri: String, type: JSON_FORMAT) -> AnyObject? {
+    func parseJson(_ uri: String, type: JSON_FORMAT) -> Any? {
         
-        var data: NSData?
+        var data: Data?
         switch type {
-          case .URL:
+          case .url:
             data = getJsonDataFromUrl(uri)
             break
-          case .FILE:
+          case .file:
             data = getJsonDataFromResource(uri)
             break
         }
         
-        if let dataJson = data as NSData? {
+        if let dataJson = data as Data? {
           return parse(dataJson)
         }
         return nil
     }
     
     // get json data from resource
-    func getJsonDataFromResource(fileName: String) -> NSData {
+    func getJsonDataFromResource(_ fileName: String) -> Data {
         
-        guard let path = NSBundle.mainBundle().pathForResource(fileName, ofType: TYPE) else {
-            return NSData()
+        guard let path = Bundle.main.path(forResource: fileName, ofType: TYPE) else {
+            return Data()
         }
-        guard let fileHandle: NSFileHandle = NSFileHandle(forReadingAtPath: path) else {
-            return NSData()
+        guard let fileHandle: FileHandle = FileHandle(forReadingAtPath: path) else {
+            return Data()
         }
         return fileHandle.readDataToEndOfFile()
     }
     
     // get json data from url
-    func getJsonDataFromUrl(url: String) -> NSData {
+    func getJsonDataFromUrl(_ url: String) -> Data {
         
-        if let nsurl = NSURL(string: url) as NSURL? {
-            var enc: NSStringEncoding = NSUTF8StringEncoding
+        if let nsurl = URL(string: url) as URL? {
+            var enc: String.Encoding = String.Encoding.utf8
             do {
-                let str = try NSString(contentsOfURL: nsurl, usedEncoding:&enc)
-                return str.dataUsingEncoding(enc)!
+                let str = try NSString(contentsOf: nsurl, usedEncoding:&enc.rawValue)
+                return str.data(using: enc.rawValue)!
             } catch _ as NSError {
-                return NSData()
+                return Data()
             }
         }
-        return NSData()
+        return Data()
     }
     
     // parse json data
-    func parse(data: NSData) -> AnyObject? {
+    func parse(_ data: Data) -> Any? {
         
-        var jsonData: AnyObject?
+        var jsonData: Any?
         do {
-            jsonData = try (NSJSONSerialization.JSONObjectWithData(
-                data, options: NSJSONReadingOptions.AllowFragments) )
+            jsonData = try (JSONSerialization.jsonObject(
+                with: data, options: JSONSerialization.ReadingOptions.allowFragments) )
         } catch  {
             // return nil
         }

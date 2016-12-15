@@ -17,7 +17,7 @@ class ActionRotation : ActionBase {
     }
     
     override func create() {
-        let moveRights: SKAction = SKAction.moveByX(100.0, y: 0.0, duration: 1.0)
+        let moveRights: SKAction = SKAction.moveBy(x: 100.0, y: 0.0, duration: 1.0)
         action = SKAction.sequence([moveRights])
     }
 }
