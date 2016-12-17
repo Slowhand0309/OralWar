@@ -22,6 +22,11 @@
 		9E3079C51C0C984600F444FC /* doorknob.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3079C31C0C984600F444FC /* doorknob.png */; };
 		9E3079C61C0C984600F444FC /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3079C41C0C984600F444FC /* pencil.png */; };
 		9E8109331C0AEE91001D86E6 /* itemlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E8109321C0AEE91001D86E6 /* itemlist.json */; };
+		9E8FA9411E05027500A780EC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8FA93F1E05027500A780EC /* Nimble.framework */; };
+		9E8FA9421E05027500A780EC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8FA9401E05027500A780EC /* Quick.framework */; };
+		9E8FA9461E0502C900A780EC /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E8FA9441E0502C900A780EC /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E8FA9471E0502C900A780EC /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E8FA9451E0502C900A780EC /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E8FA9491E05034700A780EC /* PieceStatusSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8FA9481E05034700A780EC /* PieceStatusSpec.swift */; };
 		9E90FBAA1BC40ED700F7A090 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90FBA91BC40ED700F7A090 /* Item.swift */; };
 		9E90FBAB1BC40ED700F7A090 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90FBA91BC40ED700F7A090 /* Item.swift */; };
 		9E90FBAD1BC4188D00F7A090 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90FBAC1BC4188D00F7A090 /* User.swift */; };
@@ -83,6 +88,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9E8FA9431E05028300A780EC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E8FA9461E0502C900A780EC /* Nimble.framework in CopyFiles */,
+				9E8FA9471E0502C900A780EC /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9E0C30CE1BAF01C200A185FD /* UILayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILayerView.swift; path = Game/UILayerView.swift; sourceTree = "<group>"; };
 		9E0C30D11BAF020A00A185FD /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Game/GameScene.swift; sourceTree = "<group>"; };
@@ -93,6 +112,11 @@
 		9E3079C31C0C984600F444FC /* doorknob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doorknob.png; path = res/item/doorknob.png; sourceTree = "<group>"; };
 		9E3079C41C0C984600F444FC /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pencil.png; path = res/item/pencil.png; sourceTree = "<group>"; };
 		9E8109321C0AEE91001D86E6 /* itemlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = itemlist.json; path = res/json/itemlist.json; sourceTree = "<group>"; };
+		9E8FA93F1E05027500A780EC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		9E8FA9401E05027500A780EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		9E8FA9441E0502C900A780EC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		9E8FA9451E0502C900A780EC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		9E8FA9481E05034700A780EC /* PieceStatusSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceStatusSpec.swift; sourceTree = "<group>"; };
 		9E90FBA91BC40ED700F7A090 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Data/Item.swift; sourceTree = "<group>"; };
 		9E90FBAC1BC4188D00F7A090 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Data/User.swift; sourceTree = "<group>"; };
 		9E90FBAF1BC4193000F7A090 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsUtil.swift; path = System/UserDefaultsUtil.swift; sourceTree = "<group>"; };
@@ -148,18 +172,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E8FA9411E05027500A780EC /* Nimble.framework in Frameworks */,
+				9E8FA9421E05027500A780EC /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E8FA93E1E05027500A780EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E8FA93F1E05027500A780EC /* Nimble.framework */,
+				9E8FA9401E05027500A780EC /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D35622361B8E0981005BA000 = {
 			isa = PBXGroup;
 			children = (
+				9E8FA9441E0502C900A780EC /* Nimble.framework */,
+				9E8FA9451E0502C900A780EC /* Quick.framework */,
 				D35622411B8E0981005BA000 /* OralWar */,
 				D356225B1B8E0981005BA000 /* OralWarTests */,
 				D35622401B8E0981005BA000 /* Products */,
+				9E8FA93E1E05027500A780EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				D356225E1B8E0981005BA000 /* OralWarTests.swift */,
+				9E8FA9481E05034700A780EC /* PieceStatusSpec.swift */,
 				D356225C1B8E0981005BA000 /* Supporting Files */,
 			);
 			path = OralWarTests;
@@ -389,6 +428,7 @@
 				D35622541B8E0981005BA000 /* Sources */,
 				D35622551B8E0981005BA000 /* Frameworks */,
 				D35622561B8E0981005BA000 /* Resources */,
+				9E8FA9431E05028300A780EC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -531,6 +571,7 @@
 				9E28E4571BE64C330070D2D8 /* Stage.swift in Sources */,
 				D3EF66391B8F635100BB36A5 /* MenuViewController.swift in Sources */,
 				9E90FBB11BC4193000F7A090 /* UserDefaultsUtil.swift in Sources */,
+				9E8FA9491E05034700A780EC /* PieceStatusSpec.swift in Sources */,
 				D39195D81BDCAEA1002C3341 /* ActionRotation.swift in Sources */,
 				9E90FBAE1BC4188D00F7A090 /* User.swift in Sources */,
 				D35C2D691BD928CC002012F1 /* TextureUtil.swift in Sources */,
@@ -681,6 +722,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -701,6 +743,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = OralWarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
