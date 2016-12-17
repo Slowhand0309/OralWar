@@ -12,7 +12,16 @@ import Nimble
 class PieceStatusSpec: QuickSpec {
     
     override func spec() {
-        describe("Test status", {
+        describe("Check property", {
+            
+            it("zero propertys", closure: {
+                let ps = PieceStatus(_status: 0)
+                
+                expect(ps.hasBacteria()).to(beFalse())
+                expect(ps.getHardness()).to(equal(0))
+                expect(ps.getItem()).to(equal(0))
+                expect(ps.getFellow()).to(equal(0))
+            })
             
             it("should be has status", closure: {
                 
@@ -20,9 +29,9 @@ class PieceStatusSpec: QuickSpec {
                 let p1: PieceStatus = PieceStatus(_status: status)
                 
                 expect(p1.hasBacteria()).to(beTrue())
-                expect(p1.getHardness()).to(be(5))
-                expect(p1.getItem()).to(be(10))
-                expect(p1.getFellow()).to(be(255))
+                expect(p1.getHardness()).to(equal(5))
+                expect(p1.getItem()).to(equal(10))
+                expect(p1.getFellow()).to(equal(255))
             })
         })
     }

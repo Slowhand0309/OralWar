@@ -30,9 +30,7 @@ class UserDefaultsUtil {
     
     // set default values
     class func initUserDefaults() {
-        guard let ud: UserDefaults = UserDefaults.standard else {
-            return
-        }
+        let ud = UserDefaults.standard
         let register = [
             USER_DEFAULTS_KEY_DEBUG: true,
             USER_DEFAULTS_KEY_USER_ID: 0,
@@ -47,26 +45,20 @@ class UserDefaultsUtil {
     
     // put debug mode
     class func putDebugMode(_ debug: Bool) {
-        guard let ud: UserDefaults = UserDefaults.standard else {
-            return
-        }
+        let ud = UserDefaults.standard
         ud.set(debug, forKey: USER_DEFAULTS_KEY_DEBUG)
         ud.synchronize()
     }
     
     // get debug mode
     class func getDebugMode() -> Bool {
-        guard let ud: UserDefaults = UserDefaults.standard else {
-            return false
-        }
+        let ud = UserDefaults.standard
         return ud.bool(forKey: USER_DEFAULTS_KEY_DEBUG)
     }
     
     // put user info
     class func putUserInfo(_ user: User) {
-        guard let ud: UserDefaults = UserDefaults.standard else {
-            return
-        }
+        let ud = UserDefaults.standard
         ud.set(user.getId(), forKey: USER_DEFAULTS_KEY_USER_ID)
         ud.set(user.getName(), forKey: USER_DEFAULTS_KEY_USER_NAME)
         ud.set(user.getScore(), forKey: USER_DEFAULTS_KEY_USER_SCORE)
@@ -79,9 +71,7 @@ class UserDefaultsUtil {
     
     // get user info
     class func getUserInfo() -> User? {
-        guard let ud: UserDefaults = UserDefaults.standard else {
-            return nil
-        }
+        let ud = UserDefaults.standard
         let user: User = User()
         user.setId(ud.integer(forKey: USER_DEFAULTS_KEY_USER_ID))
         user.setName(ud.string(forKey: USER_DEFAULTS_KEY_USER_NAME)!)

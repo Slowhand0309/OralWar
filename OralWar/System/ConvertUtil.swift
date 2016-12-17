@@ -50,7 +50,7 @@ class ConvertUtil {
         
         for h in 0 ..< HEIGHT {
             for w in 0 ..< WIDTH {
-                var t: Int = stageData[h * HEIGHT + w] as! Int
+                let t: Int = stageData[h * HEIGHT + w] as! Int
                 let value: UInt32 = UInt32(t)
                 stageMap[w, h] = PieceStatus(_status: value)
             }
